@@ -52,6 +52,12 @@ public class Node{
 		return ((AssociatedProb)data).prob;
 	}
 
+
+	public String getKey(){
+		return ((AssociatedProb)data).key;
+	}
+	
+
 	public void printProbTree(){
 		System.out.println("     " + data + "\n" + leftChild + "\t" + rightChild);
 

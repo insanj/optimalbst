@@ -77,7 +77,7 @@ public class Driver{
     		Node apNode = new Node(tree.pop());
 
     		while(apNode.parent == null){
-    			if(apNode.getProb() > currParent.getProb()){
+    			if(apNode.getKey().compareTo(currParent.getKey()) > 0){
     				if(currParent.rightChild == null){
     					currParent.rightChild = apNode;
     					apNode.parent = currParent;
@@ -87,7 +87,7 @@ public class Driver{
     					currParent = currParent.rightChild;
     			}//end if
 
-    			if(apNode.getProb() < currParent.getProb()){
+    			else{
     				if(currParent.leftChild == null){
     					currParent.leftChild = apNode;
     					apNode.parent = currParent;
