@@ -70,7 +70,7 @@ public class Node{
 
 	public void printProbStack(){
 		AssociatedProb prob = (AssociatedProb)data;
-		//if(leftChild != null && rightChild != null)
+		if(leftChild != null || rightChild != null)
 			System.out.println(prob + "(." + prob.prob + "): " + leftChild + " " + rightChild);
 
 		if(leftChild != null)
@@ -81,13 +81,23 @@ public class Node{
 	}//end method
 
 	public void printCostStack(int level){
-		System.out.println(data + "(" + level++ + "): " + leftChild + " " + rightChild);
+		String empty = " ";
+		for(int i = 1; i < level; i++)
+			empty += " ";
+
+		System.out.println(empty + data);
 
 		if(leftChild != null)
-			leftChild.printCostStack(level);
+			leftChild.printCostStack(++level);
+
+		else
+			System.out.println(empty + " $");
 
 		if(rightChild != null)
-			rightChild.printCostStack(level);
+			rightChild.printCostStack(++level);
+
+		else
+			System.out.println(empty + " $");
 	}//end method
 
 	@Override

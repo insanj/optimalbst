@@ -14,14 +14,13 @@ public class Driver{
 
 		//Greedy Solution
 		Node greedyParent = greedySolution(fig1047);
-		System.out.println("Stack version of greedy tree:");
-		greedyParent.printProbStack();
-
-		System.out.println("Costs to access each:");
+		System.out.println("Greedy Solution Tree:");
 		greedyParent.printCostStack(1);
 
 		//DP Solution
-		
+		Node dynamicParent = dynamicSolution(fig1047);
+		System.out.println("Dynamic Solution Tree:");
+		dynamicParent.printCostStack(1);
 	}//end main
 
 	//Takes in ArrayList of AssociatedProbs (probabilities and word keys).
