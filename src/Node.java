@@ -3,11 +3,21 @@
 public class Node{
 	public Node parent, leftChild, rightChild;
 	public Object data;
-	public int nodesBelow;
+	public int cost, index;
+	public boolean empty;
+
+	/* Constructors */
+	public Node(){
+		empty = true;
+	}
 
 	public Node(Object gd){
 		data = gd;
-		nodesBelow = 0;
+	}
+
+	public Node(int gi, Object gd){
+		index = gi;
+		data = gd;
 	}
 
 	public Node(Node copy){
@@ -15,19 +25,10 @@ public class Node{
 		leftChild = copy.leftChild;
 		rightChild = copy.rightChild;
 		data = copy.data;
-		nodesBelow = copy.nodesBelow;
+		index = copy.index;
 	}
 
-	public void setLeft(Node left){
-		leftChild = left;
-		nodesBelow++;
-	}
-
-	public void setRight(Node right){
-		rightChild = right;
-		nodesBelow++;
-	}
-
+	/* Functional Methods */
 	public void appendLeft(Node left){
 		if(leftChild == null)
 			setLeft(left);
@@ -48,53 +49,71 @@ public class Node{
 		running.setRight(right);
 	}
 
+	/* Setters */
+	public void setParent(Node gp){
+		parent = gp;
+		empty = false;
+	}
+
+	public void setLeft(Node left){
+		leftChild = left;
+		empty = false;
+	}
+
+	public void setRight(Node right){
+		rightChild = right;
+		empty = false;
+	}
+
+	public void setData(Object gd){
+		data = gd;
+		empty = false;
+	}
+
+	public void setProb(int gp){
+		if(data != null)
+			((AssociatedProb)data).prob = gp;
+		empty = false;
+	}
+
+	/* Getters */
 	public int getProb(){
 		return ((AssociatedProb)data).prob;
 	}
-
 
 	public String getKey(){
 		return ((AssociatedProb)data).key;
 	}
 	
+	public Node getRoot(){
+		if(parent == null)
+			return this;
+		else
+			return getRoot(parent);
+	}
 
-	public void printProbTree(){
-		System.out.println("     " + data + "\n" + leftChild + "\t" + rightChild);
+	private Node getRoot(Node currParent){
+		if(currParent.parent != null)
+			return getRoot(currParent.parent);
+		else
+			return currParent;
+	}
 
-		if(leftChild != null)
-			leftChild.printProbTree();
-
-		if(rightChild != null)
-			rightChild.printProbTree();
-	}//end method
-
-	public void printProbStack(){
-		AssociatedProb prob = (AssociatedProb)data;
-		if(leftChild != null || rightChild != null)
-			System.out.println(prob + "(." + prob.prob + "): " + leftChild + " " + rightChild);
-
-		if(leftChild != null)
-			leftChild.printProbStack();
-
-		if(rightChild != null)
-			rightChild.printProbStack();
-	}//end method
-
+	/* Print Methods */
 	public void printCostStack(int level){
-		String empty = " ";
-		for(int i = 1; i < level; i++)
+		String empty = new String();
+		for(int i = 0; i < level; i++)
 			empty += " ";
 
 		System.out.println(empty + data);
-
 		if(leftChild != null)
-			leftChild.printCostStack(++level);
+			leftChild.printCostStack(level + 1);
 
 		else
 			System.out.println(empty + " $");
 
 		if(rightChild != null)
-			rightChild.printCostStack(++level);
+			rightChild.printCostStack(level + 1);
 
 		else
 			System.out.println(empty + " $");
