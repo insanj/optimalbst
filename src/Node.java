@@ -105,18 +105,24 @@ public class Node{
 		for(int i = 0; i < level; i++)
 			empty += " ";
 
-		System.out.println(empty + data);
-		if(leftChild != null)
-			leftChild.printCostStack(level + 1);
+		if(data == null)
+			System.out.println(empty + "$");
 
-		else
-			System.out.println(empty + " $");
+		else{
+			System.out.println(empty + data);
 
-		if(rightChild != null)
-			rightChild.printCostStack(level + 1);
+			if(leftChild != null)
+				leftChild.printCostStack(level + 1);
 
-		else
-			System.out.println(empty + " $");
+			else
+				System.out.println(empty + " $");
+
+			if(rightChild != null)
+				rightChild.printCostStack(level + 1);
+
+			else
+				System.out.println(empty + " $");
+		}//end else
 	}//end method
 
 	@Override
