@@ -13,6 +13,7 @@ public class Driver{
 		fig1047.add(new AssociatedProb("two", 8));
 
 		//Greedy Solution
+		printDiagram("Figure 10.47", fig1047);
 		Node greedyParent = greedySolution(fig1047);
 		System.out.println("Greedy Solution Tree:");
 		System.out.println("Comparisons: " + greedyParent.cost);
@@ -20,8 +21,23 @@ public class Driver{
 		greedyParent.printCostStack(1);
 
 		//DP Solution
-		System.out.println("Dynamic Solution Tree:");
+		System.out.println("\nDynamic Solution Tree:");
 		dynamicSolution(fig1047);
+
+		for(int i = 0; i < 100; i++){
+			ArrayList<AssociatedProb> random = randomDist(1 + (int)(Math.random() * 50));
+			printDiagram("Randomized " + i, random);
+
+			greedyParent = greedySolution(random);
+			System.out.println("Greedy Solution Tree:");
+			System.out.println("Comparisons: " + greedyParent.cost);
+			System.out.println("Cost: " + greedyCost(greedyParent)/100);
+			greedyParent.printCostStack(1);
+
+			//DP Solution
+			System.out.println("\nDynamic Solution Tree:");
+			dynamicSolution(random);
+		}
 	}//end main
 
 	public static void dynamicSolution(ArrayList<AssociatedProb> givenAPs){
@@ -103,5 +119,43 @@ public class Driver{
 			running += greedyCost(node.rightChild, level + 1);
 
 		return running;
+	}//end method
+
+	public static ArrayList<AssociatedProb> randomDist(int size){
+		int[] all = new int[size];
+		int sum = 100 - size;
+		Random gen = new Random();
+		for(int i = 0; i < all.length-1; i++)
+			all[i] = gen.nextInt(sum);
+
+		all[size-1] = sum;
+		Arrays.sort(all);
+		for(int i = size - 1; i > 0; i--)
+			all[i] -= all[i-1];
+
+		for(int i = 0; i < size; i++)
+			++all[i];//65-122
+
+		ArrayList<AssociatedProb> normalized = new ArrayList<AssociatedProb>();
+		for(int i = 0; i < size; i++)
+			normalized.add(new AssociatedProb(Character.toString((char)(97 + (int)(Math.random() * (122 - 96)))), all[i]));
+
+		return normalized;
+	}
+
+	public static void printDiagram(String string, ArrayList<AssociatedProb> probs){
+		String calc = new String();
+		for(int i = -1; i <= string.length(); i++)
+			calc += "*";
+		String stars = "*****";
+
+		System.out.println(stars + calc + stars);
+		System.out.println(stars + " " + string + " " + stars);
+		System.out.println(stars + calc + stars);
+
+		for(AssociatedProb ap : probs)
+			System.out.println(" " + ap.key + " | " + (double)ap.prob/100);
+
+		System.out.println(stars + calc + stars);
 	}//end method
 }//end class
