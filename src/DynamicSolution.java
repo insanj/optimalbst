@@ -3,7 +3,6 @@
 import java.util.*;
 public class DynamicSolution{
 	public ArrayList<AssociatedProb> dynProbs = new ArrayList<AssociatedProb>();
-	public boolean flag;
 	public int calls;
 
 	public DynamicSolution(ArrayList<AssociatedProb> gl){
