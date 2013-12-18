@@ -16,7 +16,6 @@ public class DynamicSolution{
 		return solve(currProbs, 0, currProbs.length-1, dynTable);
 	}//end method
 
-	// private overloaded optimize method
 	private Node solve(AssociatedProb[] probs, int left, int right, Node[][] table){
 		calls++;
 

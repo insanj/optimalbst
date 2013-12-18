@@ -84,7 +84,7 @@ public class Driver{
 		uniform.add(new AssociatedProb("20", 20));
 		uniform.add(new AssociatedProb("20", 20));
 		uniform.add(new AssociatedProb("20", 20));
-		uniform.add(new AssociatedProb("20", 20));
+		//uniform.add(new AssociatedProb("20", 20));
 
 		printDiagram("Uniform", uniform);
 		greedyParent = greedySolution(uniform);
@@ -99,11 +99,11 @@ public class Driver{
 		user.nextLine();
 
 		ArrayList<AssociatedProb> sharp = new ArrayList<AssociatedProb>();
-		sharp.add(new AssociatedProb("50", 50)); // 1
+		sharp.add(new AssociatedProb("60", 60)); // 1
+		sharp.add(new AssociatedProb("20", 20));
 		sharp.add(new AssociatedProb("15", 15));
-		sharp.add(new AssociatedProb("10", 10));
-		sharp.add(new AssociatedProb("15", 15));
-		sharp.add(new AssociatedProb("10", 10));
+		sharp.add(new AssociatedProb("5", 5));
+	//	sharp.add(new AssociatedProb("10", 10));
 
 		printDiagram("Sharply Biased", sharp);
 		greedyParent = greedySolution(sharp);
@@ -118,14 +118,14 @@ public class Driver{
 		user.nextLine();
 
 		ArrayList<AssociatedProb> slight = new ArrayList<AssociatedProb>();
-		slight.add(new AssociatedProb("12", 12));
-		slight.add(new AssociatedProb("22", 22)); // n/4
-		slight.add(new AssociatedProb("11", 11));
+		slight.add(new AssociatedProb("45", 45));
+		slight.add(new AssociatedProb("25", 25)); // n/4
+		slight.add(new AssociatedProb("15", 15));
 		slight.add(new AssociatedProb("10", 10));
-		slight.add(new AssociatedProb("12", 12));
-		slight.add(new AssociatedProb("11", 11));
-		slight.add(new AssociatedProb("10", 10));
-		slight.add(new AssociatedProb("12", 12));
+		slight.add(new AssociatedProb("5", 5));
+	//	slight.add(new AssociatedProb("11", 11));
+	//	slight.add(new AssociatedProb("10", 10));
+	//	slight.add(new AssociatedProb("12", 12));
 
 		printDiagram("Slightly Biased", slight);
 		greedyParent = greedySolution(slight);
@@ -140,12 +140,14 @@ public class Driver{
 		user.nextLine();
 
 		ArrayList<AssociatedProb> sym = new ArrayList<AssociatedProb>();
+		sym.add(new AssociatedProb("3", 3));
+		sym.add(new AssociatedProb("9", 9));
+		sym.add(new AssociatedProb("14", 14)); // n/2
+		sym.add(new AssociatedProb("26", 26));
+		sym.add(new AssociatedProb("21", 21));
 		sym.add(new AssociatedProb("15", 15));
-		sym.add(new AssociatedProb("16", 16));
-		sym.add(new AssociatedProb("28", 28)); // n/2
-		sym.add(new AssociatedProb("14", 14));
-		sym.add(new AssociatedProb("13", 13));
-		sym.add(new AssociatedProb("14", 14));
+		sym.add(new AssociatedProb("9", 9));
+		sym.add(new AssociatedProb("3", 3));
 
 		printDiagram("Symmetrical", sym);
 		greedyParent = greedySolution(sym);
