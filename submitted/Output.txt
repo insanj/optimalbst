@@ -1,0 +1,5352 @@
+ Julian Weiss
+ CSC172 Project
+ Dynamic Programming
+***************************************
+***** Dynamic Programming Project *****
+***************************************
+Part One, Fig 10.47
+Press enter to continue...
+
+************************
+***** Figure 10.47 *****
+************************
+Size: 7
+ a | 0.22
+ am | 0.18
+ and | 0.2
+ egg | 0.05
+ if | 0.25
+ the | 0.02
+ two | 0.08
+************************
+Greedy Solution Tree:
+ Comparisons: 42
+ Cost: 2.43
+ if
+  a
+   $
+   and
+    am
+     $
+     $
+    egg
+     $
+     $
+  two
+   the
+    $
+    $
+   $
+
+Dynamic Solution Tree:
+ Calls: 155
+ Cost: 2.15
+and
+ a
+  $
+  am
+   $
+   $
+ if
+  egg
+   $
+   $
+  two
+   the
+    $
+    $
+   $
+
+********************************************************
+Part Two/Three, 100 Randomized Distributions
+Trees will not be printed (see code to change)
+Five sets of 100 will be generated with Costs/etc,
+in order to determine average costs for each algorithm 
+(see README for depiction of this data)
+Press enter to continue...
+
+**************************
+***** Randomized 1.1 *****
+**************************
+Distribution Size: 33
+Greedy Solution:
+ Comparisons: 419
+ Cost: 4.27
+Dynamic Solution:
+ Calls: 13025
+ Cost: 3.92
+**************************
+***** Randomized 1.2 *****
+**************************
+Distribution Size: 41
+Greedy Solution:
+ Comparisons: 694
+ Cost: 5.31
+Dynamic Solution:
+ Calls: 24601
+ Cost: 4.19
+**************************
+***** Randomized 1.3 *****
+**************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1470
+ Cost: 6.57
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.1
+**************************
+***** Randomized 1.4 *****
+**************************
+Distribution Size: 33
+Greedy Solution:
+ Comparisons: 470
+ Cost: 4.49
+Dynamic Solution:
+ Calls: 13025
+ Cost: 3.91
+**************************
+***** Randomized 1.5 *****
+**************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 543
+ Cost: 4.81
+Dynamic Solution:
+ Calls: 18205
+ Cost: 4.02
+**************************
+***** Randomized 1.6 *****
+**************************
+Distribution Size: 61
+Greedy Solution:
+ Comparisons: 915
+ Cost: 5.04
+Dynamic Solution:
+ Calls: 79301
+ Cost: 4.76
+**************************
+***** Randomized 1.7 *****
+**************************
+Distribution Size: 2
+Greedy Solution:
+ Comparisons: 4
+ Cost: 1.45
+Dynamic Solution:
+ Calls: 5
+ Cost: 1.45
+**************************
+***** Randomized 1.8 *****
+**************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 1181
+ Cost: 6.97
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.78
+**************************
+***** Randomized 1.9 *****
+**************************
+Distribution Size: 65
+Greedy Solution:
+ Comparisons: 1171
+ Cost: 5.92
+Dynamic Solution:
+ Calls: 95681
+ Cost: 4.85
+***************************
+***** Randomized 1.10 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 938
+ Cost: 5.67
+Dynamic Solution:
+ Calls: 55333
+ Cost: 4.58
+***************************
+***** Randomized 1.11 *****
+***************************
+Distribution Size: 95
+Greedy Solution:
+ Comparisons: 1897
+ Cost: 7.1
+Dynamic Solution:
+ Calls: 294691
+ Cost: 5.61
+***************************
+***** Randomized 1.12 *****
+***************************
+Distribution Size: 24
+Greedy Solution:
+ Comparisons: 275
+ Cost: 3.44
+Dynamic Solution:
+ Calls: 5153
+ Cost: 3.25
+***************************
+***** Randomized 1.13 *****
+***************************
+Distribution Size: 94
+Greedy Solution:
+ Comparisons: 1974
+ Cost: 7.38
+Dynamic Solution:
+ Calls: 285573
+ Cost: 5.57
+***************************
+***** Randomized 1.14 *****
+***************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 772
+ Cost: 5.0
+Dynamic Solution:
+ Calls: 44101
+ Cost: 4.41
+***************************
+***** Randomized 1.15 *****
+***************************
+Distribution Size: 97
+Greedy Solution:
+ Comparisons: 2004
+ Cost: 7.39
+Dynamic Solution:
+ Calls: 313505
+ Cost: 5.68
+***************************
+***** Randomized 1.16 *****
+***************************
+Distribution Size: 4
+Greedy Solution:
+ Comparisons: 21
+ Cost: 1.72
+Dynamic Solution:
+ Calls: 33
+ Cost: 1.51
+***************************
+***** Randomized 1.17 *****
+***************************
+Distribution Size: 38
+Greedy Solution:
+ Comparisons: 580
+ Cost: 5.12
+Dynamic Solution:
+ Calls: 19685
+ Cost: 4.14
+***************************
+***** Randomized 1.18 *****
+***************************
+Distribution Size: 81
+Greedy Solution:
+ Comparisons: 1487
+ Cost: 6.27
+Dynamic Solution:
+ Calls: 183601
+ Cost: 5.2
+***************************
+***** Randomized 1.19 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1684
+ Cost: 7.1
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.18
+***************************
+***** Randomized 1.20 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 685
+ Cost: 4.73
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.27
+***************************
+***** Randomized 1.21 *****
+***************************
+Distribution Size: 49
+Greedy Solution:
+ Comparisons: 873
+ Cost: 5.63
+Dynamic Solution:
+ Calls: 41553
+ Cost: 4.41
+***************************
+***** Randomized 1.22 *****
+***************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 303
+ Cost: 4.28
+Dynamic Solution:
+ Calls: 4005
+ Cost: 3.49
+***************************
+***** Randomized 1.23 *****
+***************************
+Distribution Size: 66
+Greedy Solution:
+ Comparisons: 1325
+ Cost: 6.65
+Dynamic Solution:
+ Calls: 100101
+ Cost: 4.9
+***************************
+***** Randomized 1.24 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1034
+ Cost: 5.52
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.77
+***************************
+***** Randomized 1.25 *****
+***************************
+Distribution Size: 73
+Greedy Solution:
+ Comparisons: 1464
+ Cost: 6.73
+Dynamic Solution:
+ Calls: 134905
+ Cost: 5.03
+***************************
+***** Randomized 1.26 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1390
+ Cost: 6.57
+Dynamic Solution:
+ Calls: 124251
+ Cost: 4.98
+***************************
+***** Randomized 1.27 *****
+***************************
+Distribution Size: 65
+Greedy Solution:
+ Comparisons: 1036
+ Cost: 5.33
+Dynamic Solution:
+ Calls: 95681
+ Cost: 4.8
+***************************
+***** Randomized 1.28 *****
+***************************
+Distribution Size: 11
+Greedy Solution:
+ Comparisons: 82
+ Cost: 2.51
+Dynamic Solution:
+ Calls: 551
+ Cost: 2.45
+***************************
+***** Randomized 1.29 *****
+***************************
+Distribution Size: 70
+Greedy Solution:
+ Comparisons: 1323
+ Cost: 6.23
+Dynamic Solution:
+ Calls: 119141
+ Cost: 4.86
+***************************
+***** Randomized 1.30 *****
+***************************
+Distribution Size: 98
+Greedy Solution:
+ Comparisons: 1957
+ Cost: 7.21
+Dynamic Solution:
+ Calls: 323205
+ Cost: 5.73
+***************************
+***** Randomized 1.31 *****
+***************************
+Distribution Size: 84
+Greedy Solution:
+ Comparisons: 1577
+ Cost: 6.45
+Dynamic Solution:
+ Calls: 204513
+ Cost: 5.28
+***************************
+***** Randomized 1.32 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 905
+ Cost: 5.51
+Dynamic Solution:
+ Calls: 55333
+ Cost: 4.54
+***************************
+***** Randomized 1.33 *****
+***************************
+Distribution Size: 89
+Greedy Solution:
+ Comparisons: 1711
+ Cost: 6.65
+Dynamic Solution:
+ Calls: 242793
+ Cost: 5.39
+***************************
+***** Randomized 1.34 *****
+***************************
+Distribution Size: 6
+Greedy Solution:
+ Comparisons: 32
+ Cost: 1.91
+Dynamic Solution:
+ Calls: 101
+ Cost: 2.12
+***************************
+***** Randomized 1.35 *****
+***************************
+Distribution Size: 24
+Greedy Solution:
+ Comparisons: 260
+ Cost: 3.46
+Dynamic Solution:
+ Calls: 5153
+ Cost: 3.43
+***************************
+***** Randomized 1.36 *****
+***************************
+Distribution Size: 3
+Greedy Solution:
+ Comparisons: 11
+ Cost: 1.49
+Dynamic Solution:
+ Calls: 15
+ Cost: 1.49
+***************************
+***** Randomized 1.37 *****
+***************************
+Distribution Size: 18
+Greedy Solution:
+ Comparisons: 182
+ Cost: 3.09
+Dynamic Solution:
+ Calls: 2245
+ Cost: 2.82
+***************************
+***** Randomized 1.38 *****
+***************************
+Distribution Size: 84
+Greedy Solution:
+ Comparisons: 1673
+ Cost: 6.77
+Dynamic Solution:
+ Calls: 204513
+ Cost: 5.26
+***************************
+***** Randomized 1.39 *****
+***************************
+Distribution Size: 20
+Greedy Solution:
+ Comparisons: 217
+ Cost: 3.24
+Dynamic Solution:
+ Calls: 3041
+ Cost: 3.2
+***************************
+***** Randomized 1.40 *****
+***************************
+Distribution Size: 23
+Greedy Solution:
+ Comparisons: 292
+ Cost: 3.69
+Dynamic Solution:
+ Calls: 4555
+ Cost: 3.24
+***************************
+***** Randomized 1.41 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 574
+ Cost: 5.44
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.98
+***************************
+***** Randomized 1.42 *****
+***************************
+Distribution Size: 11
+Greedy Solution:
+ Comparisons: 97
+ Cost: 2.33
+Dynamic Solution:
+ Calls: 551
+ Cost: 2.12
+***************************
+***** Randomized 1.43 *****
+***************************
+Distribution Size: 2
+Greedy Solution:
+ Comparisons: 4
+ Cost: 1.35
+Dynamic Solution:
+ Calls: 5
+ Cost: 1.35
+***************************
+***** Randomized 1.44 *****
+***************************
+Distribution Size: 56
+Greedy Solution:
+ Comparisons: 1075
+ Cost: 6.16
+Dynamic Solution:
+ Calls: 61601
+ Cost: 4.65
+***************************
+***** Randomized 1.45 *****
+***************************
+Distribution Size: 4
+Greedy Solution:
+ Comparisons: 18
+ Cost: 1.32
+Dynamic Solution:
+ Calls: 33
+ Cost: 1.28
+***************************
+***** Randomized 1.46 *****
+***************************
+Distribution Size: 31
+Greedy Solution:
+ Comparisons: 447
+ Cost: 4.28
+Dynamic Solution:
+ Calls: 10851
+ Cost: 3.6
+***************************
+***** Randomized 1.47 *****
+***************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1595
+ Cost: 6.44
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.34
+***************************
+***** Randomized 1.48 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1258
+ Cost: 6.0
+Dynamic Solution:
+ Calls: 124251
+ Cost: 5.05
+***************************
+***** Randomized 1.49 *****
+***************************
+Distribution Size: 36
+Greedy Solution:
+ Comparisons: 503
+ Cost: 4.22
+Dynamic Solution:
+ Calls: 16801
+ Cost: 3.83
+***************************
+***** Randomized 1.50 *****
+***************************
+Distribution Size: 2
+Greedy Solution:
+ Comparisons: 4
+ Cost: 1.48
+Dynamic Solution:
+ Calls: 5
+ Cost: 1.48
+***************************
+***** Randomized 1.51 *****
+***************************
+Distribution Size: 43
+Greedy Solution:
+ Comparisons: 759
+ Cost: 5.57
+Dynamic Solution:
+ Calls: 28295
+ Cost: 4.18
+***************************
+***** Randomized 1.52 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 692
+ Cost: 4.78
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.29
+***************************
+***** Randomized 1.53 *****
+***************************
+Distribution Size: 26
+Greedy Solution:
+ Comparisons: 319
+ Cost: 4.01
+Dynamic Solution:
+ Calls: 6501
+ Cost: 3.58
+***************************
+***** Randomized 1.54 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 558
+ Cost: 4.53
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.18
+***************************
+***** Randomized 1.55 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 562
+ Cost: 4.98
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.88
+***************************
+***** Randomized 1.56 *****
+***************************
+Distribution Size: 90
+Greedy Solution:
+ Comparisons: 1721
+ Cost: 6.66
+Dynamic Solution:
+ Calls: 250981
+ Cost: 5.43
+***************************
+***** Randomized 1.57 *****
+***************************
+Distribution Size: 8
+Greedy Solution:
+ Comparisons: 64
+ Cost: 2.23
+Dynamic Solution:
+ Calls: 225
+ Cost: 2.19
+***************************
+***** Randomized 1.58 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 760
+ Cost: 5.18
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.21
+***************************
+***** Randomized 1.59 *****
+***************************
+Distribution Size: 98
+Greedy Solution:
+ Comparisons: 2035
+ Cost: 7.47
+Dynamic Solution:
+ Calls: 323205
+ Cost: 5.73
+***************************
+***** Randomized 1.60 *****
+***************************
+Distribution Size: 38
+Greedy Solution:
+ Comparisons: 538
+ Cost: 4.41
+Dynamic Solution:
+ Calls: 19685
+ Cost: 3.85
+***************************
+***** Randomized 1.61 *****
+***************************
+Distribution Size: 27
+Greedy Solution:
+ Comparisons: 377
+ Cost: 4.25
+Dynamic Solution:
+ Calls: 7255
+ Cost: 3.56
+***************************
+***** Randomized 1.62 *****
+***************************
+Distribution Size: 95
+Greedy Solution:
+ Comparisons: 2110
+ Cost: 7.81
+Dynamic Solution:
+ Calls: 294691
+ Cost: 5.59
+***************************
+***** Randomized 1.63 *****
+***************************
+Distribution Size: 43
+Greedy Solution:
+ Comparisons: 753
+ Cost: 5.6
+Dynamic Solution:
+ Calls: 28295
+ Cost: 4.24
+***************************
+***** Randomized 1.64 *****
+***************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 450
+ Cost: 4.87
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.54
+***************************
+***** Randomized 1.65 *****
+***************************
+Distribution Size: 94
+Greedy Solution:
+ Comparisons: 1947
+ Cost: 7.27
+Dynamic Solution:
+ Calls: 285573
+ Cost: 5.55
+***************************
+***** Randomized 1.66 *****
+***************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 932
+ Cost: 5.33
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.66
+***************************
+***** Randomized 1.67 *****
+***************************
+Distribution Size: 55
+Greedy Solution:
+ Comparisons: 876
+ Cost: 5.33
+Dynamic Solution:
+ Calls: 58411
+ Cost: 4.63
+***************************
+***** Randomized 1.68 *****
+***************************
+Distribution Size: 97
+Greedy Solution:
+ Comparisons: 1941
+ Cost: 7.18
+Dynamic Solution:
+ Calls: 313505
+ Cost: 5.7
+***************************
+***** Randomized 1.69 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1104
+ Cost: 5.61
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.8
+***************************
+***** Randomized 1.70 *****
+***************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1655
+ Cost: 6.58
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.32
+***************************
+***** Randomized 1.71 *****
+***************************
+Distribution Size: 5
+Greedy Solution:
+ Comparisons: 25
+ Cost: 2.16
+Dynamic Solution:
+ Calls: 61
+ Cost: 2.04
+***************************
+***** Randomized 1.72 *****
+***************************
+Distribution Size: 75
+Greedy Solution:
+ Comparisons: 1265
+ Cost: 5.8
+Dynamic Solution:
+ Calls: 146151
+ Cost: 5.09
+***************************
+***** Randomized 1.73 *****
+***************************
+Distribution Size: 74
+Greedy Solution:
+ Comparisons: 1651
+ Cost: 7.23
+Dynamic Solution:
+ Calls: 140453
+ Cost: 5.05
+***************************
+***** Randomized 1.74 *****
+***************************
+Distribution Size: 97
+Greedy Solution:
+ Comparisons: 2070
+ Cost: 7.61
+Dynamic Solution:
+ Calls: 313505
+ Cost: 5.7
+***************************
+***** Randomized 1.75 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 231
+ Cost: 3.44
+Dynamic Solution:
+ Calls: 2623
+ Cost: 2.89
+***************************
+***** Randomized 1.76 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 481
+ Cost: 4.26
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.89
+***************************
+***** Randomized 1.77 *****
+***************************
+Distribution Size: 89
+Greedy Solution:
+ Comparisons: 1669
+ Cost: 6.5
+Dynamic Solution:
+ Calls: 242793
+ Cost: 5.39
+***************************
+***** Randomized 1.78 *****
+***************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 426
+ Cost: 4.72
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.75
+***************************
+***** Randomized 1.79 *****
+***************************
+Distribution Size: 65
+Greedy Solution:
+ Comparisons: 1333
+ Cost: 6.89
+Dynamic Solution:
+ Calls: 95681
+ Cost: 4.91
+***************************
+***** Randomized 1.80 *****
+***************************
+Distribution Size: 61
+Greedy Solution:
+ Comparisons: 933
+ Cost: 5.2
+Dynamic Solution:
+ Calls: 79301
+ Cost: 4.75
+***************************
+***** Randomized 1.81 *****
+***************************
+Distribution Size: 67
+Greedy Solution:
+ Comparisons: 1347
+ Cost: 6.59
+Dynamic Solution:
+ Calls: 104655
+ Cost: 4.85
+***************************
+***** Randomized 1.82 *****
+***************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 309
+ Cost: 3.58
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.58
+***************************
+***** Randomized 1.83 *****
+***************************
+Distribution Size: 95
+Greedy Solution:
+ Comparisons: 1828
+ Cost: 6.84
+Dynamic Solution:
+ Calls: 294691
+ Cost: 5.6
+***************************
+***** Randomized 1.84 *****
+***************************
+Distribution Size: 96
+Greedy Solution:
+ Comparisons: 2177
+ Cost: 8.0
+Dynamic Solution:
+ Calls: 304001
+ Cost: 5.63
+***************************
+***** Randomized 1.85 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 783
+ Cost: 5.36
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.31
+***************************
+***** Randomized 1.86 *****
+***************************
+Distribution Size: 24
+Greedy Solution:
+ Comparisons: 278
+ Cost: 3.68
+Dynamic Solution:
+ Calls: 5153
+ Cost: 3.48
+***************************
+***** Randomized 1.87 *****
+***************************
+Distribution Size: 68
+Greedy Solution:
+ Comparisons: 1162
+ Cost: 5.71
+Dynamic Solution:
+ Calls: 109345
+ Cost: 4.95
+***************************
+***** Randomized 1.88 *****
+***************************
+Distribution Size: 4
+Greedy Solution:
+ Comparisons: 21
+ Cost: 1.8
+Dynamic Solution:
+ Calls: 33
+ Cost: 1.8
+***************************
+***** Randomized 1.89 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1465
+ Cost: 6.17
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.16
+***************************
+***** Randomized 1.90 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 842
+ Cost: 5.01
+Dynamic Solution:
+
+ Calls: 55333
+ Cost: 4.52
+***************************
+***** Randomized 1.91 *****
+***************************
+Distribution Size: 52
+Greedy Solution:
+ Comparisons: 822
+ Cost: 5.24
+Dynamic Solution:
+ Calls: 49505
+ Cost: 4.58
+***************************
+***** Randomized 1.92 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1104
+ Cost: 5.75
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.79
+***************************
+***** Randomized 1.93 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1552
+ Cost: 6.75
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.2
+***************************
+***** Randomized 1.94 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 830
+ Cost: 5.49
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.39
+***************************
+***** Randomized 1.95 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1038
+ Cost: 5.41
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.79
+***************************
+***** Randomized 1.96 *****
+***************************
+Distribution Size: 73
+Greedy Solution:
+ Comparisons: 1251
+ Cost: 5.83
+Dynamic Solution:
+ Calls: 134905
+ Cost: 5.05
+***************************
+***** Randomized 1.97 *****
+***************************
+Distribution Size: 55
+Greedy Solution:
+ Comparisons: 912
+ Cost: 5.34
+Dynamic Solution:
+ Calls: 58411
+ Cost: 4.53
+***************************
+***** Randomized 1.98 *****
+***************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 96
+ Cost: 2.54
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.47
+***************************
+***** Randomized 1.99 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 71
+ Cost: 2.34
+Dynamic Solution:
+ Calls: 313
+ Cost: 2.41
+****************************
+***** Randomized 1.100 *****
+****************************
+Distribution Size: 41
+Greedy Solution:
+ Comparisons: 568
+ Cost: 4.61
+Dynamic Solution:
+ Calls: 24601
+ Cost: 4.2
+**************************
+***** Randomized 2.1 *****
+**************************
+Distribution Size: 51
+Greedy Solution:
+ Comparisons: 923
+ Cost: 5.78
+Dynamic Solution:
+ Calls: 46751
+ Cost: 4.46
+**************************
+***** Randomized 2.2 *****
+**************************
+Distribution Size: 59
+Greedy Solution:
+ Comparisons: 1135
+ Cost: 6.29
+Dynamic Solution:
+ Calls: 71863
+ Cost: 4.72
+**************************
+***** Randomized 2.3 *****
+**************************
+Distribution Size: 67
+Greedy Solution:
+ Comparisons: 1395
+ Cost: 7.07
+Dynamic Solution:
+ Calls: 104655
+ Cost: 4.93
+**************************
+***** Randomized 2.4 *****
+**************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 72
+ Cost: 2.13
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.3
+**************************
+***** Randomized 2.5 *****
+**************************
+Distribution Size: 30
+Greedy Solution:
+ Comparisons: 347
+ Cost: 3.67
+Dynamic Solution:
+ Calls: 9861
+ Cost: 3.73
+**************************
+***** Randomized 2.6 *****
+**************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 258
+ Cost: 3.51
+Dynamic Solution:
+ Calls: 4005
+ Cost: 3.15
+**************************
+***** Randomized 2.7 *****
+**************************
+Distribution Size: 59
+Greedy Solution:
+ Comparisons: 1255
+ Cost: 7.03
+Dynamic Solution:
+ Calls: 71863
+ Cost: 4.71
+**************************
+***** Randomized 2.8 *****
+**************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1363
+ Cost: 6.05
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.13
+**************************
+***** Randomized 2.9 *****
+**************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 261
+ Cost: 3.8
+Dynamic Solution:
+ Calls: 4005
+ Cost: 3.37
+***************************
+***** Randomized 2.10 *****
+***************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1784
+ Cost: 7.04
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.35
+***************************
+***** Randomized 2.11 *****
+***************************
+Distribution Size: 17
+Greedy Solution:
+ Comparisons: 166
+ Cost: 2.79
+Dynamic Solution:
+ Calls: 1905
+ Cost: 2.65
+***************************
+***** Randomized 2.12 *****
+***************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 78
+ Cost: 2.46
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.14
+***************************
+***** Randomized 2.13 *****
+***************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 1683
+ Cost: 6.65
+Dynamic Solution:
+
+ Calls: 234785
+ Cost: 5.37
+***************************
+***** Randomized 2.14 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1663
+ Cost: 7.02
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.19
+***************************
+***** Randomized 2.15 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 642
+ Cost: 5.06
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.09
+***************************
+***** Randomized 2.16 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 741
+ Cost: 4.85
+Dynamic Solution:
+ Calls: 34501
+ Cost: 3.99
+***************************
+***** Randomized 2.17 *****
+***************************
+Distribution Size: 78
+Greedy Solution:
+ Comparisons: 1340
+ Cost: 5.93
+Dynamic Solution:
+ Calls: 164165
+ Cost: 5.15
+***************************
+***** Randomized 2.18 *****
+***************************
+Distribution Size: 44
+Greedy Solution:
+ Comparisons: 643
+ Cost: 4.76
+Dynamic Solution:
+ Calls: 30273
+ Cost: 4.21
+***************************
+***** Randomized 2.19 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 789
+ Cost: 5.12
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.18
+***************************
+***** Randomized 2.20 *****
+***************************
+Distribution Size: 42
+Greedy Solution:
+ Comparisons: 638
+ Cost: 4.99
+Dynamic Solution:
+ Calls: 26405
+ Cost: 4.19
+***************************
+***** Randomized 2.21 *****
+***************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1347
+ Cost: 6.07
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.12
+***************************
+***** Randomized 2.22 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 706
+ Cost: 4.64
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.23
+***************************
+***** Randomized 2.23 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1468
+ Cost: 6.32
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.2
+***************************
+***** Randomized 2.24 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1453
+ Cost: 6.42
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.12
+***************************
+***** Randomized 2.25 *****
+***************************
+Distribution Size: 49
+Greedy Solution:
+ Comparisons: 843
+ Cost: 5.59
+Dynamic Solution:
+ Calls: 41553
+ Cost: 4.43
+***************************
+***** Randomized 2.26 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 800
+ Cost: 4.99
+Dynamic Solution:
+ Calls: 55333
+ Cost: 4.56
+***************************
+***** Randomized 2.27 *****
+***************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 306
+ Cost: 3.97
+Dynamic Solution:
+ Calls: 4005
+ Cost: 3.11
+***************************
+***** Randomized 2.28 *****
+***************************
+Distribution Size: 24
+Greedy Solution:
+ Comparisons: 269
+ Cost: 3.42
+Dynamic Solution:
+ Calls: 5153
+ Cost: 3.3
+***************************
+***** Randomized 2.29 *****
+***************************
+Distribution Size: 18
+Greedy Solution:
+ Comparisons: 182
+ Cost: 3.14
+Dynamic Solution:
+ Calls: 2245
+ Cost: 3.12
+***************************
+***** Randomized 2.30 *****
+***************************
+Distribution Size: 20
+Greedy Solution:
+ Comparisons: 232
+ Cost: 3.39
+Dynamic Solution:
+ Calls: 3041
+ Cost: 3.15
+***************************
+***** Randomized 2.31 *****
+***************************
+Distribution Size: 60
+Greedy Solution:
+ Comparisons: 962
+ Cost: 5.35
+Dynamic Solution:
+ Calls: 75521
+ Cost: 4.77
+***************************
+***** Randomized 2.32 *****
+***************************
+Distribution Size: 74
+Greedy Solution:
+ Comparisons: 1447
+ Cost: 6.6
+Dynamic Solution:
+ Calls: 140453
+ Cost: 5.1
+***************************
+***** Randomized 2.33 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1528
+ Cost: 6.67
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.12
+***************************
+***** Randomized 2.34 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1486
+ Cost: 6.33
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.17
+***************************
+***** Randomized 2.35 *****
+***************************
+Distribution Size: 70
+Greedy Solution:
+ Comparisons: 1338
+ Cost: 6.43
+Dynamic Solution:
+ Calls: 119141
+ Cost: 4.98
+***************************
+***** Randomized 2.36 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 587
+ Cost: 4.62
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.0
+***************************
+***** Randomized 2.37 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1558
+ Cost: 7.14
+Dynamic Solution:
+ Calls: 124251
+ Cost: 4.96
+***************************
+***** Randomized 2.38 *****
+***************************
+Distribution Size: 41
+Greedy Solution:
+ Comparisons: 571
+ Cost: 4.51
+Dynamic Solution:
+ Calls: 24601
+ Cost: 4.14
+***************************
+***** Randomized 2.39 *****
+***************************
+Distribution Size: 33
+Greedy Solution:
+ Comparisons: 461
+ Cost: 4.44
+Dynamic Solution:
+ Calls: 13025
+ Cost: 3.75
+***************************
+***** Randomized 2.40 *****
+***************************
+Distribution Size: 44
+Greedy Solution:
+ Comparisons: 790
+ Cost: 5.59
+Dynamic Solution:
+ Calls: 30273
+ Cost: 4.14
+***************************
+***** Randomized 2.41 *****
+***************************
+Distribution Size: 74
+Greedy Solution:
+ Comparisons: 1423
+ Cost: 6.46
+Dynamic Solution:
+ Calls: 140453
+ Cost: 5.02
+***************************
+***** Randomized 2.42 *****
+***************************
+Distribution Size: 13
+Greedy Solution:
+ Comparisons: 108
+ Cost: 2.75
+Dynamic Solution:
+ Calls: 885
+ Cost: 2.76
+***************************
+***** Randomized 2.43 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 934
+ Cost: 6.26
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.36
+***************************
+***** Randomized 2.44 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 569
+ Cost: 4.8
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.16
+***************************
+***** Randomized 2.45 *****
+***************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 748
+ Cost: 5.02
+Dynamic Solution:
+
+ Calls: 44101
+ Cost: 4.44
+***************************
+***** Randomized 2.46 *****
+***************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1835
+ Cost: 7.15
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.34
+***************************
+***** Randomized 2.47 *****
+***************************
+Distribution Size: 67
+Greedy Solution:
+ Comparisons: 1266
+ Cost: 6.22
+Dynamic Solution:
+ Calls: 104655
+ Cost: 4.95
+***************************
+***** Randomized 2.48 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 579
+ Cost: 4.65
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.09
+***************************
+***** Randomized 2.49 *****
+***************************
+Distribution Size: 15
+Greedy Solution:
+ Comparisons: 227
+ Cost: 4.22
+Dynamic Solution:
+ Calls: 1331
+ Cost: 2.89
+***************************
+***** Randomized 2.50 *****
+***************************
+Distribution Size: 43
+Greedy Solution:
+ Comparisons: 666
+ Cost: 4.86
+Dynamic Solution:
+ Calls: 28295
+ Cost: 4.11
+***************************
+***** Randomized 2.51 *****
+***************************
+Distribution Size: 34
+Greedy Solution:
+ Comparisons: 462
+ Cost: 4.26
+Dynamic Solution:
+ Calls: 14213
+ Cost: 3.8
+***************************
+***** Randomized 2.52 *****
+***************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 285
+ Cost: 3.84
+Dynamic Solution:
+ Calls: 4005
+ Cost: 3.17
+***************************
+***** Randomized 2.53 *****
+***************************
+Distribution Size: 3
+Greedy Solution:
+ Comparisons: 8
+ Cost: 1.47
+Dynamic Solution:
+ Calls: 15
+ Cost: 1.47
+***************************
+***** Randomized 2.54 *****
+***************************
+Distribution Size: 74
+Greedy Solution:
+ Comparisons: 1588
+ Cost: 7.16
+Dynamic Solution:
+ Calls: 140453
+ Cost: 5.05
+***************************
+***** Randomized 2.55 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1507
+ Cost: 6.41
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.15
+***************************
+***** Randomized 2.56 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1837
+ Cost: 8.0
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.14
+***************************
+***** Randomized 2.57 *****
+***************************
+Distribution Size: 41
+Greedy Solution:
+ Comparisons: 673
+ Cost: 5.13
+Dynamic Solution:
+ Calls: 24601
+ Cost: 4.11
+***************************
+***** Randomized 2.58 *****
+***************************
+Distribution Size: 73
+Greedy Solution:
+ Comparisons: 1350
+ Cost: 6.22
+Dynamic Solution:
+ Calls: 134905
+ Cost: 5.04
+***************************
+***** Randomized 2.59 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 878
+ Cost: 5.3
+Dynamic Solution:
+ Calls: 55333
+ Cost: 4.55
+***************************
+***** Randomized 2.60 *****
+***************************
+Distribution Size: 23
+Greedy Solution:
+ Comparisons: 235
+ Cost: 3.4
+Dynamic Solution:
+ Calls: 4555
+ Cost: 3.31
+***************************
+***** Randomized 2.61 *****
+***************************
+Distribution Size: 69
+Greedy Solution:
+ Comparisons: 1262
+ Cost: 6.12
+Dynamic Solution:
+ Calls: 114173
+ Cost: 4.9
+***************************
+***** Randomized 2.62 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1250
+ Cost: 6.62
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.83
+***************************
+***** Randomized 2.63 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1230
+ Cost: 6.44
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.85
+***************************
+***** Randomized 2.64 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 647
+ Cost: 5.37
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.13
+***************************
+***** Randomized 2.65 *****
+***************************
+Distribution Size: 55
+Greedy Solution:
+ Comparisons: 1047
+ Cost: 6.26
+Dynamic Solution:
+ Calls: 58411
+ Cost: 4.59
+***************************
+***** Randomized 2.66 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1543
+ Cost: 7.27
+Dynamic Solution:
+ Calls: 124251
+ Cost: 5.03
+***************************
+***** Randomized 2.67 *****
+***************************
+Distribution Size: 5
+Greedy Solution:
+ Comparisons: 28
+ Cost: 1.49
+Dynamic Solution:
+ Calls: 61
+ Cost: 1.39
+***************************
+***** Randomized 2.68 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1121
+ Cost: 5.88
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.83
+***************************
+***** Randomized 2.69 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 1681
+ Cost: 6.81
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.25
+***************************
+***** Randomized 2.70 *****
+***************************
+Distribution Size: 17
+Greedy Solution:
+ Comparisons: 181
+ Cost: 3.38
+Dynamic Solution:
+ Calls: 1905
+ Cost: 2.83
+***************************
+***** Randomized 2.71 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 195
+ Cost: 3.2
+Dynamic Solution:
+ Calls: 2623
+ Cost: 3.21
+***************************
+***** Randomized 2.72 *****
+***************************
+Distribution Size: 26
+Greedy Solution:
+ Comparisons: 370
+ Cost: 4.44
+Dynamic Solution:
+ Calls: 6501
+ Cost: 3.51
+***************************
+***** Randomized 2.73 *****
+***************************
+Distribution Size: 78
+Greedy Solution:
+ Comparisons: 1376
+ Cost: 6.01
+Dynamic Solution:
+ Calls: 164165
+ Cost: 5.13
+***************************
+***** Randomized 2.74 *****
+***************************
+Distribution Size: 32
+Greedy Solution:
+ Comparisons: 427
+ Cost: 4.09
+Dynamic Solution:
+ Calls: 11905
+ Cost: 3.78
+***************************
+***** Randomized 2.75 *****
+***************************
+Distribution Size: 17
+Greedy Solution:
+ Comparisons: 202
+ Cost: 3.15
+Dynamic Solution:
+ Calls: 1905
+ Cost: 2.56
+***************************
+***** Randomized 2.76 *****
+***************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1527
+ Cost: 6.71
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.1
+***************************
+***** Randomized 2.77 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 602
+ Cost: 5.22
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.09
+***************************
+***** Randomized 2.78 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1365
+ Cost: 6.95
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.82
+***************************
+***** Randomized 2.79 *****
+***************************
+Distribution Size: 82
+Greedy Solution:
+ Comparisons: 1986
+ Cost: 8.21
+Dynamic Solution:
+ Calls: 190405
+ Cost: 5.23
+***************************
+***** Randomized 2.80 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 219
+ Cost: 3.78
+Dynamic Solution:
+ Calls: 2623
+ Cost: 3.24
+***************************
+***** Randomized 2.81 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1570
+ Cost: 6.77
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.04
+***************************
+***** Randomized 2.82 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1502
+ Cost: 7.91
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.87
+***************************
+***** Randomized 2.83 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 689
+ Cost: 4.87
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.42
+***************************
+***** Randomized 2.84 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 747
+ Cost: 5.08
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.14
+***************************
+***** Randomized 2.85 *****
+***************************
+Distribution Size: 17
+Greedy Solution:
+ Comparisons: 172
+ Cost: 3.54
+Dynamic Solution:
+ Calls: 1905
+ Cost: 3.02
+***************************
+***** Randomized 2.86 *****
+***************************
+Distribution Size: 67
+Greedy Solution:
+ Comparisons: 1116
+ Cost: 5.51
+Dynamic Solution:
+ Calls: 104655
+ Cost: 4.84
+***************************
+***** Randomized 2.87 *****
+***************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 75
+ Cost: 2.17
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.2
+***************************
+***** Randomized 2.88 *****
+***************************
+Distribution Size: 81
+Greedy Solution:
+ Comparisons: 1685
+ Cost: 7.0
+Dynamic Solution:
+
+ Calls: 183601
+ Cost: 5.2
+***************************
+***** Randomized 2.89 *****
+***************************
+Distribution Size: 26
+Greedy Solution:
+ Comparisons: 361
+ Cost: 4.45
+Dynamic Solution:
+ Calls: 6501
+ Cost: 3.4
+***************************
+***** Randomized 2.90 *****
+***************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 84
+ Cost: 2.52
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.26
+***************************
+***** Randomized 2.91 *****
+***************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 321
+ Cost: 3.71
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.61
+***************************
+***** Randomized 2.92 *****
+***************************
+Distribution Size: 62
+Greedy Solution:
+ Comparisons: 1138
+ Cost: 6.14
+Dynamic Solution:
+ Calls: 83205
+ Cost: 4.73
+***************************
+***** Randomized 2.93 *****
+***************************
+Distribution Size: 58
+Greedy Solution:
+ Comparisons: 960
+ Cost: 5.61
+Dynamic Solution:
+ Calls: 68325
+ Cost: 4.72
+***************************
+***** Randomized 2.94 *****
+***************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 519
+ Cost: 4.41
+Dynamic Solution:
+ Calls: 18205
+ Cost: 4.02
+***************************
+***** Randomized 2.95 *****
+***************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 378
+ Cost: 4.37
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.75
+***************************
+***** Randomized 2.96 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 56
+ Cost: 1.76
+Dynamic Solution:
+ Calls: 313
+ Cost: 1.77
+***************************
+***** Randomized 2.97 *****
+***************************
+Distribution Size: 25
+Greedy Solution:
+ Comparisons: 306
+ Cost: 3.8
+Dynamic Solution:
+ Calls: 5801
+ Cost: 3.32
+***************************
+***** Randomized 2.98 *****
+***************************
+Distribution Size: 52
+Greedy Solution:
+ Comparisons: 921
+ Cost: 5.92
+Dynamic Solution:
+ Calls: 49505
+ Cost: 4.5
+***************************
+***** Randomized 2.99 *****
+***************************
+Distribution Size: 8
+Greedy Solution:
+ Comparisons: 55
+ Cost: 2.38
+Dynamic Solution:
+ Calls: 225
+ Cost: 2.31
+****************************
+***** Randomized 2.100 *****
+****************************
+Distribution Size: 31
+Greedy Solution:
+ Comparisons: 420
+ Cost: 4.0
+Dynamic Solution:
+ Calls: 10851
+ Cost: 3.48
+**************************
+***** Randomized 3.1 *****
+**************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 590
+ Cost: 4.93
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.14
+**************************
+***** Randomized 3.2 *****
+**************************
+Distribution Size: 81
+Greedy Solution:
+ Comparisons: 1496
+ Cost: 6.35
+Dynamic Solution:
+ Calls: 183601
+ Cost: 5.2
+**************************
+***** Randomized 3.3 *****
+**************************
+Distribution Size: 3
+Greedy Solution:
+ Comparisons: 11
+ Cost: 1.49
+Dynamic Solution:
+ Calls: 15
+ Cost: 1.49
+**************************
+***** Randomized 3.4 *****
+**************************
+Distribution Size: 30
+Greedy Solution:
+ Comparisons: 449
+ Cost: 4.92
+Dynamic Solution:
+ Calls: 9861
+ Cost: 3.7
+**************************
+***** Randomized 3.5 *****
+**************************
+Distribution Size: 4
+Greedy Solution:
+ Comparisons: 18
+ Cost: 1.73
+Dynamic Solution:
+ Calls: 33
+ Cost: 1.59
+**************************
+***** Randomized 3.6 *****
+**************************
+Distribution Size: 13
+Greedy Solution:
+ Comparisons: 141
+ Cost: 3.3
+Dynamic Solution:
+ Calls: 885
+ Cost: 2.78
+**************************
+***** Randomized 3.7 *****
+**************************
+Distribution Size: 44
+Greedy Solution:
+ Comparisons: 670
+ Cost: 4.65
+Dynamic Solution:
+ Calls: 30273
+ Cost: 4.12
+**************************
+***** Randomized 3.8 *****
+**************************
+Distribution Size: 91
+Greedy Solution:
+ Comparisons: 2157
+ Cost: 8.19
+Dynamic Solution:
+ Calls: 259351
+ Cost: 5.44
+**************************
+***** Randomized 3.9 *****
+**************************
+Distribution Size: 96
+Greedy Solution:
+ Comparisons: 1817
+ Cost: 6.78
+Dynamic Solution:
+
+ Calls: 304001
+ Cost: 5.63
+***************************
+***** Randomized 3.10 *****
+***************************
+Distribution Size: 18
+Greedy Solution:
+ Comparisons: 203
+ Cost: 3.0
+Dynamic Solution:
+ Calls: 2245
+ Cost: 2.89
+***************************
+***** Randomized 3.11 *****
+***************************
+Distribution Size: 68
+Greedy Solution:
+ Comparisons: 1255
+ Cost: 6.11
+Dynamic Solution:
+ Calls: 109345
+ Cost: 4.92
+***************************
+***** Randomized 3.12 *****
+***************************
+Distribution Size: 33
+Greedy Solution:
+ Comparisons: 473
+ Cost: 4.19
+Dynamic Solution:
+ Calls: 13025
+ Cost: 3.61
+***************************
+***** Randomized 3.13 *****
+***************************
+Distribution Size: 81
+Greedy Solution:
+ Comparisons: 1739
+ Cost: 7.36
+Dynamic Solution:
+ Calls: 183601
+ Cost: 5.2
+***************************
+***** Randomized 3.14 *****
+***************************
+Distribution Size: 25
+Greedy Solution:
+ Comparisons: 285
+ Cost: 3.61
+Dynamic Solution:
+ Calls: 5801
+ Cost: 3.39
+***************************
+***** Randomized 3.15 *****
+***************************
+Distribution Size: 56
+Greedy Solution:
+ Comparisons: 1120
+ Cost: 6.68
+Dynamic Solution:
+ Calls: 61601
+ Cost: 4.59
+***************************
+***** Randomized 3.16 *****
+***************************
+Distribution Size: 20
+Greedy Solution:
+ Comparisons: 229
+ Cost: 3.69
+Dynamic Solution:
+ Calls: 3041
+ Cost: 3.17
+***************************
+***** Randomized 3.17 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 2527
+ Cost: 9.93
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.24
+***************************
+***** Randomized 3.18 *****
+***************************
+Distribution Size: 55
+Greedy Solution:
+ Comparisons: 960
+ Cost: 5.71
+Dynamic Solution:
+ Calls: 58411
+ Cost: 4.63
+***************************
+***** Randomized 3.19 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 216
+ Cost: 3.46
+Dynamic Solution:
+ Calls: 2623
+ Cost: 3.11
+***************************
+***** Randomized 3.20 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 1597
+ Cost: 6.47
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.25
+***************************
+***** Randomized 3.21 *****
+***************************
+Distribution Size: 23
+Greedy Solution:
+ Comparisons: 247
+ Cost: 3.1
+Dynamic Solution:
+ Calls: 4555
+ Cost: 3.18
+***************************
+***** Randomized 3.22 *****
+***************************
+Distribution Size: 81
+Greedy Solution:
+ Comparisons: 1529
+ Cost: 6.36
+Dynamic Solution:
+
+ Calls: 183601
+ Cost: 5.2
+***************************
+***** Randomized 3.23 *****
+***************************
+Distribution Size: 99
+Greedy Solution:
+ Comparisons: 2312
+ Cost: 8.38
+Dynamic Solution:
+ Calls: 333103
+ Cost: 5.79
+***************************
+***** Randomized 3.24 *****
+***************************
+Distribution Size: 67
+Greedy Solution:
+ Comparisons: 1377
+ Cost: 6.9
+Dynamic Solution:
+ Calls: 104655
+ Cost: 4.9
+***************************
+***** Randomized 3.25 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 62
+ Cost: 2.26
+Dynamic Solution:
+ Calls: 313
+ Cost: 2.31
+***************************
+***** Randomized 3.26 *****
+***************************
+Distribution Size: 23
+Greedy Solution:
+ Comparisons: 295
+ Cost: 4.1
+Dynamic Solution:
+ Calls: 4555
+ Cost: 3.4
+***************************
+***** Randomized 3.27 *****
+***************************
+Distribution Size: 72
+Greedy Solution:
+ Comparisons: 1376
+ Cost: 6.4
+Dynamic Solution:
+ Calls: 129505
+ Cost: 5.03
+***************************
+***** Randomized 3.28 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 809
+ Cost: 5.16
+Dynamic Solution:
+ Calls: 55333
+ Cost: 4.56
+***************************
+***** Randomized 3.29 *****
+***************************
+Distribution Size: 85
+Greedy Solution:
+ Comparisons: 2082
+ Cost: 8.22
+Dynamic Solution:
+ Calls: 211821
+ Cost: 5.28
+***************************
+***** Randomized 3.30 *****
+***************************
+Distribution Size: 97
+Greedy Solution:
+ Comparisons: 2025
+ Cost: 7.46
+Dynamic Solution:
+ Calls: 313505
+ Cost: 5.7
+***************************
+***** Randomized 3.31 *****
+***************************
+Distribution Size: 21
+Greedy Solution:
+ Comparisons: 293
+ Cost: 4.32
+Dynamic Solution:
+ Calls: 3501
+ Cost: 3.31
+***************************
+***** Randomized 3.32 *****
+***************************
+Distribution Size: 14
+Greedy Solution:
+ Comparisons: 142
+ Cost: 2.86
+Dynamic Solution:
+ Calls: 1093
+ Cost: 2.52
+***************************
+***** Randomized 3.33 *****
+***************************
+Distribution Size: 45
+Greedy Solution:
+ Comparisons: 713
+ Cost: 4.98
+Dynamic Solution:
+ Calls: 32341
+ Cost: 4.26
+***************************
+***** Randomized 3.34 *****
+***************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 1040
+ Cost: 5.94
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.73
+***************************
+***** Randomized 3.35 *****
+***************************
+Distribution Size: 75
+Greedy Solution:
+ Comparisons: 1382
+ Cost: 6.18
+Dynamic Solution:
+ Calls: 146151
+ Cost: 5.05
+***************************
+***** Randomized 3.36 *****
+***************************
+Distribution Size: 86
+Greedy Solution:
+ Comparisons: 1726
+ Cost: 6.81
+Dynamic Solution:
+ Calls: 219301
+ Cost: 5.31
+***************************
+***** Randomized 3.37 *****
+***************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 802
+ Cost: 5.3
+Dynamic Solution:
+ Calls: 44101
+ Cost: 4.52
+***************************
+***** Randomized 3.38 *****
+***************************
+Distribution Size: 36
+Greedy Solution:
+ Comparisons: 476
+ Cost: 4.27
+Dynamic Solution:
+ Calls: 16801
+ Cost: 3.89
+***************************
+***** Randomized 3.39 *****
+***************************
+Distribution Size: 62
+Greedy Solution:
+ Comparisons: 1195
+ Cost: 6.43
+Dynamic Solution:
+ Calls: 83205
+ Cost: 4.83
+***************************
+***** Randomized 3.40 *****
+***************************
+Distribution Size: 92
+Greedy Solution:
+ Comparisons: 2035
+ Cost: 7.62
+Dynamic Solution:
+ Calls: 267905
+ Cost: 5.49
+***************************
+***** Randomized 3.41 *****
+***************************
+Distribution Size: 92
+Greedy Solution:
+ Comparisons: 1972
+ Cost: 7.43
+Dynamic Solution:
+
+ Calls: 267905
+ Cost: 5.49
+***************************
+***** Randomized 3.42 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 788
+ Cost: 5.39
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.39
+***************************
+***** Randomized 3.43 *****
+***************************
+Distribution Size: 59
+Greedy Solution:
+ Comparisons: 988
+ Cost: 5.45
+Dynamic Solution:
+ Calls: 71863
+ Cost: 4.65
+***************************
+***** Randomized 3.44 *****
+***************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 1776
+ Cost: 6.89
+Dynamic Solution:
+ Calls: 234785
+ Cost: 5.37
+***************************
+***** Randomized 3.45 *****
+***************************
+Distribution Size: 97
+Greedy Solution:
+ Comparisons: 2052
+ Cost: 7.54
+Dynamic Solution:
+ Calls: 313505
+ Cost: 5.7
+***************************
+***** Randomized 3.46 *****
+***************************
+Distribution Size: 34
+Greedy Solution:
+ Comparisons: 480
+ Cost: 4.34
+Dynamic Solution:
+ Calls: 14213
+ Cost: 3.82
+***************************
+***** Randomized 3.47 *****
+***************************
+Distribution Size: 84
+Greedy Solution:
+ Comparisons: 1817
+ Cost: 7.31
+Dynamic Solution:
+ Calls: 204513
+ Cost: 5.26
+***************************
+***** Randomized 3.48 *****
+***************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 805
+ Cost: 5.43
+Dynamic Solution:
+ Calls: 44101
+ Cost: 4.55
+***************************
+***** Randomized 3.49 *****
+***************************
+Distribution Size: 41
+Greedy Solution:
+ Comparisons: 670
+ Cost: 5.07
+Dynamic Solution:
+ Calls: 24601
+ Cost: 4.11
+***************************
+***** Randomized 3.50 *****
+***************************
+Distribution Size: 69
+Greedy Solution:
+ Comparisons: 1448
+ Cost: 7.06
+Dynamic Solution:
+ Calls: 114173
+ Cost: 4.94
+***************************
+***** Randomized 3.51 *****
+***************************
+Distribution Size: 34
+Greedy Solution:
+ Comparisons: 477
+ Cost: 4.41
+Dynamic Solution:
+ Calls: 14213
+ Cost: 3.87
+***************************
+***** Randomized 3.52 *****
+***************************
+Distribution Size: 56
+Greedy Solution:
+ Comparisons: 1162
+ Cost: 6.49
+Dynamic Solution:
+ Calls: 61601
+ Cost: 4.58
+***************************
+***** Randomized 3.53 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 1009
+ Cost: 6.96
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.4
+***************************
+***** Randomized 3.54 *****
+***************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 531
+ Cost: 4.4
+Dynamic Solution:
+ Calls: 18205
+ Cost: 3.89
+***************************
+***** Randomized 3.55 *****
+***************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 926
+ Cost: 5.31
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.65
+***************************
+***** Randomized 3.56 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1384
+ Cost: 6.1
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.1
+***************************
+***** Randomized 3.57 *****
+***************************
+Distribution Size: 66
+Greedy Solution:
+ Comparisons: 1205
+ Cost: 6.02
+Dynamic Solution:
+
+ Calls: 100101
+ Cost: 4.79
+***************************
+***** Randomized 3.58 *****
+***************************
+Distribution Size: 55
+Greedy Solution:
+ Comparisons: 1050
+ Cost: 6.23
+Dynamic Solution:
+ Calls: 58411
+ Cost: 4.58
+***************************
+***** Randomized 3.59 *****
+***************************
+Distribution Size: 36
+Greedy Solution:
+ Comparisons: 485
+ Cost: 3.91
+Dynamic Solution:
+ Calls: 16801
+ Cost: 3.66
+***************************
+***** Randomized 3.60 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 646
+ Cost: 4.48
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.34
+***************************
+***** Randomized 3.61 *****
+***************************
+Distribution Size: 95
+Greedy Solution:
+ Comparisons: 2077
+ Cost: 7.69
+Dynamic Solution:
+ Calls: 294691
+ Cost: 5.61
+***************************
+***** Randomized 3.62 *****
+***************************
+Distribution Size: 90
+Greedy Solution:
+ Comparisons: 2093
+ Cost: 7.95
+Dynamic Solution:
+ Calls: 250981
+ Cost: 5.42
+***************************
+***** Randomized 3.63 *****
+***************************
+Distribution Size: 98
+Greedy Solution:
+ Comparisons: 2065
+ Cost: 7.57
+Dynamic Solution:
+ Calls: 323205
+ Cost: 5.73
+***************************
+***** Randomized 3.64 *****
+***************************
+Distribution Size: 27
+Greedy Solution:
+ Comparisons: 368
+ Cost: 4.41
+Dynamic Solution:
+ Calls: 7255
+ Cost: 3.66
+***************************
+***** Randomized 3.65 *****
+***************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 1761
+ Cost: 6.88
+Dynamic Solution:
+ Calls: 234785
+ Cost: 5.38
+***************************
+***** Randomized 3.66 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 246
+ Cost: 3.91
+Dynamic Solution:
+ Calls: 2623
+ Cost: 3.12
+***************************
+***** Randomized 3.67 *****
+***************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1461
+ Cost: 6.41
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.13
+***************************
+***** Randomized 3.68 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 735
+ Cost: 5.1
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.26
+***************************
+***** Randomized 3.69 *****
+***************************
+Distribution Size: 62
+Greedy Solution:
+ Comparisons: 1150
+ Cost: 6.14
+Dynamic Solution:
+ Calls: 83205
+ Cost: 4.77
+***************************
+***** Randomized 3.70 *****
+***************************
+Distribution Size: 85
+Greedy Solution:
+ Comparisons: 1659
+ Cost: 6.76
+Dynamic Solution:
+ Calls: 211821
+ Cost: 5.27
+***************************
+***** Randomized 3.71 *****
+***************************
+Distribution Size: 13
+Greedy Solution:
+ Comparisons: 123
+ Cost: 2.95
+Dynamic Solution:
+ Calls: 885
+ Cost: 2.74
+***************************
+***** Randomized 3.72 *****
+***************************
+Distribution Size: 54
+Greedy Solution:
+ Comparisons: 923
+ Cost: 5.48
+Dynamic Solution:
+ Calls: 55333
+ Cost: 4.48
+***************************
+***** Randomized 3.73 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 1642
+ Cost: 6.71
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.24
+***************************
+***** Randomized 3.74 *****
+***************************
+Distribution Size: 68
+Greedy Solution:
+ Comparisons: 1159
+ Cost: 5.66
+Dynamic Solution:
+ Calls: 109345
+ Cost: 4.89
+***************************
+***** Randomized 3.75 *****
+***************************
+Distribution Size: 89
+Greedy Solution:
+ Comparisons: 1798
+ Cost: 6.98
+Dynamic Solution:
+ Calls: 242793
+ Cost: 5.4
+***************************
+***** Randomized 3.76 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1339
+ Cost: 6.34
+Dynamic Solution:
+ Calls: 124251
+ Cost: 4.98
+***************************
+***** Randomized 3.77 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1085
+ Cost: 5.81
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.85
+***************************
+***** Randomized 3.78 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 772
+ Cost: 5.21
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.35
+***************************
+***** Randomized 3.79 *****
+***************************
+Distribution Size: 7
+Greedy Solution:
+ Comparisons: 51
+ Cost: 2.48
+Dynamic Solution:
+ Calls: 155
+ Cost: 2.09
+***************************
+***** Randomized 3.80 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 77
+ Cost: 1.98
+Dynamic Solution:
+ Calls: 313
+ Cost: 1.91
+***************************
+***** Randomized 3.81 *****
+***************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 75
+ Cost: 2.46
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.54
+***************************
+***** Randomized 3.82 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 755
+ Cost: 5.08
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.34
+***************************
+***** Randomized 3.83 *****
+***************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 733
+ Cost: 4.72
+Dynamic Solution:
+ Calls: 44101
+ Cost: 4.42
+***************************
+***** Randomized 3.84 *****
+***************************
+Distribution Size: 26
+Greedy Solution:
+ Comparisons: 313
+ Cost: 3.91
+Dynamic Solution:
+ Calls: 6501
+ Cost: 3.51
+***************************
+***** Randomized 3.85 *****
+***************************
+Distribution Size: 58
+Greedy Solution:
+ Comparisons: 1143
+ Cost: 6.25
+Dynamic Solution:
+ Calls: 68325
+ Cost: 4.53
+***************************
+***** Randomized 3.86 *****
+***************************
+Distribution Size: 89
+Greedy Solution:
+ Comparisons: 2005
+ Cost: 7.74
+Dynamic Solution:
+
+ Calls: 242793
+ Cost: 5.39
+***************************
+***** Randomized 3.87 *****
+***************************
+Distribution Size: 20
+Greedy Solution:
+ Comparisons: 253
+ Cost: 3.95
+Dynamic Solution:
+ Calls: 3041
+ Cost: 3.21
+***************************
+***** Randomized 3.88 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 850
+ Cost: 5.9
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.37
+***************************
+***** Randomized 3.89 *****
+***************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 923
+ Cost: 5.33
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.62
+***************************
+***** Randomized 3.90 *****
+***************************
+Distribution Size: 60
+Greedy Solution:
+ Comparisons: 962
+ Cost: 5.42
+Dynamic Solution:
+ Calls: 75521
+ Cost: 4.79
+***************************
+***** Randomized 3.91 *****
+***************************
+Distribution Size: 49
+Greedy Solution:
+ Comparisons: 885
+ Cost: 5.75
+Dynamic Solution:
+ Calls: 41553
+ Cost: 4.46
+***************************
+***** Randomized 3.92 *****
+***************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 1899
+ Cost: 7.35
+Dynamic Solution:
+ Calls: 234785
+ Cost: 5.36
+***************************
+***** Randomized 3.93 *****
+***************************
+Distribution Size: 7
+Greedy Solution:
+ Comparisons: 45
+ Cost: 2.02
+Dynamic Solution:
+ Calls: 155
+ Cost: 2.07
+***************************
+***** Randomized 3.94 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1091
+ Cost: 5.69
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.78
+***************************
+***** Randomized 3.95 *****
+***************************
+Distribution Size: 78
+Greedy Solution:
+ Comparisons: 1484
+ Cost: 6.46
+Dynamic Solution:
+ Calls: 164165
+ Cost: 5.15
+***************************
+***** Randomized 3.96 *****
+***************************
+Distribution Size: 13
+Greedy Solution:
+ Comparisons: 126
+ Cost: 3.17
+Dynamic Solution:
+ Calls: 885
+ Cost: 2.79
+***************************
+***** Randomized 3.97 *****
+***************************
+Distribution Size: 34
+Greedy Solution:
+ Comparisons: 408
+ Cost: 4.01
+Dynamic Solution:
+ Calls: 14213
+ Cost: 3.77
+***************************
+***** Randomized 3.98 *****
+***************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1428
+ Cost: 6.44
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.1
+***************************
+***** Randomized 3.99 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1246
+ Cost: 5.86
+Dynamic Solution:
+ Calls: 124251
+ Cost: 5.0
+****************************
+***** Randomized 3.100 *****
+****************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 336
+ Cost: 3.76
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.57
+**************************
+***** Randomized 4.1 *****
+**************************
+Distribution Size: 36
+Greedy Solution:
+ Comparisons: 554
+ Cost: 4.72
+Dynamic Solution:
+ Calls: 16801
+ Cost: 3.86
+**************************
+***** Randomized 4.2 *****
+**************************
+Distribution Size: 93
+Greedy Solution:
+ Comparisons: 1802
+ Cost: 6.82
+Dynamic Solution:
+ Calls: 276645
+ Cost: 5.51
+**************************
+***** Randomized 4.3 *****
+**************************
+Distribution Size: 90
+Greedy Solution:
+ Comparisons: 1787
+ Cost: 6.93
+Dynamic Solution:
+ Calls: 250981
+ Cost: 5.42
+**************************
+***** Randomized 4.4 *****
+**************************
+Distribution Size: 25
+Greedy Solution:
+ Comparisons: 321
+ Cost: 4.1
+Dynamic Solution:
+ Calls: 5801
+ Cost: 3.5
+**************************
+***** Randomized 4.5 *****
+**************************
+Distribution Size: 79
+Greedy Solution:
+ Comparisons: 1995
+ Cost: 8.18
+Dynamic Solution:
+
+ Calls: 170483
+ Cost: 5.16
+**************************
+***** Randomized 4.6 *****
+**************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 198
+ Cost: 3.03
+Dynamic Solution:
+ Calls: 2623
+ Cost: 3.01
+**************************
+***** Randomized 4.7 *****
+**************************
+Distribution Size: 49
+Greedy Solution:
+ Comparisons: 738
+ Cost: 4.98
+Dynamic Solution:
+ Calls: 41553
+ Cost: 4.4
+**************************
+***** Randomized 4.8 *****
+**************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 787
+ Cost: 4.99
+Dynamic Solution:
+ Calls: 44101
+ Cost: 4.4
+**************************
+***** Randomized 4.9 *****
+**************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 525
+ Cost: 4.58
+Dynamic Solution:
+ Calls: 18205
+ Cost: 4.04
+***************************
+***** Randomized 4.10 *****
+***************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 615
+ Cost: 5.2
+Dynamic Solution:
+ Calls: 18205
+ Cost: 4.04
+***************************
+***** Randomized 4.11 *****
+***************************
+Distribution Size: 55
+Greedy Solution:
+ Comparisons: 888
+ Cost: 5.17
+Dynamic Solution:
+ Calls: 58411
+ Cost: 4.51
+***************************
+***** Randomized 4.12 *****
+***************************
+Distribution Size: 1
+Greedy Solution:
+ Comparisons: 0
+ Cost: 1.0
+Dynamic Solution:
+ Calls: 1
+ Cost: 1.0
+***************************
+***** Randomized 4.13 *****
+***************************
+Distribution Size: 15
+Greedy Solution:
+ Comparisons: 170
+ Cost: 2.75
+Dynamic Solution:
+ Calls: 1331
+ Cost: 2.65
+***************************
+***** Randomized 4.14 *****
+***************************
+Distribution Size: 82
+Greedy Solution:
+ Comparisons: 1584
+ Cost: 6.54
+Dynamic Solution:
+ Calls: 190405
+ Cost: 5.23
+***************************
+***** Randomized 4.15 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 466
+ Cost: 4.47
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.97
+***************************
+***** Randomized 4.16 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1834
+ Cost: 7.58
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.17
+***************************
+***** Randomized 4.17 *****
+***************************
+Distribution Size: 53
+Greedy Solution:
+ Comparisons: 787
+ Cost: 5.03
+Dynamic Solution:
+ Calls: 52365
+ Cost: 4.61
+***************************
+***** Randomized 4.18 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 517
+ Cost: 4.43
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.82
+***************************
+***** Randomized 4.19 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 243
+ Cost: 3.37
+Dynamic Solution:
+ Calls: 2623
+ Cost: 2.75
+***************************
+***** Randomized 4.20 *****
+***************************
+Distribution Size: 11
+Greedy Solution:
+ Comparisons: 82
+ Cost: 2.36
+Dynamic Solution:
+ Calls: 551
+ Cost: 2.48
+***************************
+***** Randomized 4.21 *****
+***************************
+Distribution Size: 59
+Greedy Solution:
+ Comparisons: 1039
+ Cost: 5.79
+Dynamic Solution:
+ Calls: 71863
+ Cost: 4.72
+***************************
+***** Randomized 4.22 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1285
+ Cost: 6.13
+Dynamic Solution:
+ Calls: 124251
+ Cost: 5.01
+***************************
+***** Randomized 4.23 *****
+***************************
+Distribution Size: 62
+Greedy Solution:
+ Comparisons: 1003
+ Cost: 5.43
+Dynamic Solution:
+ Calls: 83205
+ Cost: 4.84
+***************************
+***** Randomized 4.24 *****
+***************************
+Distribution Size: 16
+Greedy Solution:
+ Comparisons: 150
+ Cost: 2.8
+Dynamic Solution:
+ Calls: 1601
+ Cost: 2.74
+***************************
+***** Randomized 4.25 *****
+***************************
+Distribution Size: 49
+Greedy Solution:
+ Comparisons: 918
+ Cost: 5.96
+Dynamic Solution:
+ Calls: 41553
+ Cost: 4.32
+***************************
+***** Randomized 4.26 *****
+***************************
+Distribution Size: 51
+Greedy Solution:
+ Comparisons: 905
+ Cost: 5.58
+Dynamic Solution:
+ Calls: 46751
+ Cost: 4.39
+***************************
+***** Randomized 4.27 *****
+***************************
+Distribution Size: 50
+Greedy Solution:
+ Comparisons: 985
+ Cost: 6.51
+Dynamic Solution:
+ Calls: 44101
+ Cost: 4.47
+***************************
+***** Randomized 4.28 *****
+***************************
+Distribution Size: 32
+Greedy Solution:
+ Comparisons: 436
+ Cost: 4.54
+Dynamic Solution:
+ Calls: 11905
+ Cost: 3.89
+***************************
+***** Randomized 4.29 *****
+***************************
+Distribution Size: 68
+Greedy Solution:
+ Comparisons: 1333
+ Cost: 6.54
+Dynamic Solution:
+ Calls: 109345
+ Cost: 4.94
+***************************
+***** Randomized 4.30 *****
+***************************
+Distribution Size: 11
+Greedy Solution:
+ Comparisons: 85
+ Cost: 2.26
+Dynamic Solution:
+ Calls: 551
+ Cost: 2.07
+***************************
+***** Randomized 4.31 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 675
+ Cost: 4.83
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.16
+***************************
+***** Randomized 4.32 *****
+***************************
+Distribution Size: 36
+Greedy Solution:
+ Comparisons: 563
+ Cost: 4.87
+Dynamic Solution:
+ Calls: 16801
+ Cost: 3.94
+***************************
+***** Randomized 4.33 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 1735
+ Cost: 7.02
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.25
+***************************
+***** Randomized 4.34 *****
+***************************
+Distribution Size: 82
+Greedy Solution:
+ Comparisons: 1497
+ Cost: 6.27
+Dynamic Solution:
+ Calls: 190405
+ Cost: 5.25
+***************************
+***** Randomized 4.35 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 561
+ Cost: 4.37
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.05
+***************************
+***** Randomized 4.36 *****
+***************************
+Distribution Size: 14
+Greedy Solution:
+ Comparisons: 127
+ Cost: 2.78
+Dynamic Solution:
+ Calls: 1093
+ Cost: 2.86
+***************************
+***** Randomized 4.37 *****
+***************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 255
+ Cost: 3.06
+Dynamic Solution:
+ Calls: 4005
+ Cost: 2.96
+***************************
+***** Randomized 4.38 *****
+***************************
+Distribution Size: 85
+Greedy Solution:
+ Comparisons: 1716
+ Cost: 6.83
+Dynamic Solution:
+ Calls: 211821
+ Cost: 5.3
+***************************
+***** Randomized 4.39 *****
+***************************
+Distribution Size: 32
+Greedy Solution:
+ Comparisons: 454
+ Cost: 4.53
+Dynamic Solution:
+ Calls: 11905
+ Cost: 3.86
+***************************
+***** Randomized 4.40 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1816
+ Cost: 7.96
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.14
+***************************
+***** Randomized 4.41 *****
+***************************
+Distribution Size: 10
+Greedy Solution:
+ Comparisons: 90
+ Cost: 2.86
+Dynamic Solution:
+ Calls: 421
+ Cost: 2.5
+***************************
+***** Randomized 4.42 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1122
+ Cost: 5.76
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.74
+***************************
+***** Randomized 4.43 *****
+***************************
+Distribution Size: 56
+Greedy Solution:
+ Comparisons: 1141
+ Cost: 6.54
+Dynamic Solution:
+ Calls: 61601
+ Cost: 4.61
+***************************
+***** Randomized 4.44 *****
+***************************
+Distribution Size: 66
+Greedy Solution:
+ Comparisons: 1076
+ Cost: 5.43
+Dynamic Solution:
+ Calls: 100101
+ Cost: 4.84
+***************************
+***** Randomized 4.45 *****
+***************************
+Distribution Size: 12
+Greedy Solution:
+ Comparisons: 122
+ Cost: 2.92
+Dynamic Solution:
+ Calls: 705
+ Cost: 2.39
+***************************
+***** Randomized 4.46 *****
+***************************
+Distribution Size: 45
+Greedy Solution:
+ Comparisons: 842
+ Cost: 6.03
+Dynamic Solution:
+ Calls: 32341
+ Cost: 4.26
+***************************
+***** Randomized 4.47 *****
+***************************
+Distribution Size: 96
+Greedy Solution:
+ Comparisons: 2186
+ Cost: 8.03
+Dynamic Solution:
+
+ Calls: 304001
+ Cost: 5.64
+***************************
+***** Randomized 4.48 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 556
+ Cost: 4.72
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.92
+***************************
+***** Randomized 4.49 *****
+***************************
+Distribution Size: 21
+Greedy Solution:
+ Comparisons: 224
+ Cost: 3.39
+Dynamic Solution:
+ Calls: 3501
+ Cost: 3.02
+***************************
+***** Randomized 4.50 *****
+***************************
+Distribution Size: 92
+Greedy Solution:
+ Comparisons: 2080
+ Cost: 7.82
+Dynamic Solution:
+ Calls: 267905
+ Cost: 5.5
+***************************
+***** Randomized 4.51 *****
+***************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1679
+ Cost: 6.68
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.35
+***************************
+***** Randomized 4.52 *****
+***************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 2364
+ Cost: 9.09
+Dynamic Solution:
+ Calls: 234785
+ Cost: 5.37
+***************************
+***** Randomized 4.53 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1408
+ Cost: 6.06
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.19
+***************************
+***** Randomized 4.54 *****
+***************************
+Distribution Size: 92
+Greedy Solution:
+ Comparisons: 1969
+ Cost: 7.41
+Dynamic Solution:
+ Calls: 267905
+ Cost: 5.47
+***************************
+***** Randomized 4.55 *****
+***************************
+Distribution Size: 29
+Greedy Solution:
+ Comparisons: 388
+ Cost: 4.67
+Dynamic Solution:
+ Calls: 8933
+ Cost: 3.65
+***************************
+***** Randomized 4.56 *****
+***************************
+Distribution Size: 30
+Greedy Solution:
+ Comparisons: 407
+ Cost: 4.09
+Dynamic Solution:
+ Calls: 9861
+ Cost: 3.62
+***************************
+***** Randomized 4.57 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 636
+ Cost: 5.09
+Dynamic Solution:
+ Calls: 22881
+ Cost: 3.98
+***************************
+***** Randomized 4.58 *****
+***************************
+Distribution Size: 38
+Greedy Solution:
+ Comparisons: 532
+ Cost: 4.38
+Dynamic Solution:
+ Calls: 19685
+ Cost: 4.01
+***************************
+***** Randomized 4.59 *****
+***************************
+Distribution Size: 56
+Greedy Solution:
+ Comparisons: 1009
+ Cost: 5.87
+Dynamic Solution:
+ Calls: 61601
+ Cost: 4.62
+***************************
+***** Randomized 4.60 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 657
+ Cost: 4.77
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.37
+***************************
+***** Randomized 4.61 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 521
+ Cost: 4.16
+Dynamic Solution:
+ Calls: 21243
+ Cost: 3.97
+***************************
+***** Randomized 4.62 *****
+***************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 1031
+ Cost: 5.84
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.57
+***************************
+***** Randomized 4.63 *****
+***************************
+Distribution Size: 11
+Greedy Solution:
+ Comparisons: 82
+ Cost: 2.5
+Dynamic Solution:
+ Calls: 551
+ Cost: 2.45
+***************************
+***** Randomized 4.64 *****
+***************************
+Distribution Size: 52
+Greedy Solution:
+ Comparisons: 843
+ Cost: 5.43
+Dynamic Solution:
+ Calls: 49505
+ Cost: 4.54
+***************************
+***** Randomized 4.65 *****
+***************************
+Distribution Size: 5
+Greedy Solution:
+ Comparisons: 25
+ Cost: 1.91
+Dynamic Solution:
+ Calls: 61
+ Cost: 2.02
+***************************
+***** Randomized 4.66 *****
+***************************
+Distribution Size: 16
+Greedy Solution:
+ Comparisons: 174
+ Cost: 3.32
+Dynamic Solution:
+ Calls: 1601
+ Cost: 2.63
+***************************
+***** Randomized 4.67 *****
+***************************
+Distribution Size: 29
+Greedy Solution:
+ Comparisons: 439
+ Cost: 4.54
+Dynamic Solution:
+ Calls: 8933
+ Cost: 3.58
+***************************
+***** Randomized 4.68 *****
+***************************
+Distribution Size: 31
+Greedy Solution:
+ Comparisons: 432
+ Cost: 4.81
+Dynamic Solution:
+ Calls: 10851
+ Cost: 3.89
+***************************
+***** Randomized 4.69 *****
+***************************
+Distribution Size: 8
+Greedy Solution:
+ Comparisons: 58
+ Cost: 2.53
+Dynamic Solution:
+ Calls: 225
+ Cost: 2.28
+***************************
+***** Randomized 4.70 *****
+***************************
+Distribution Size: 7
+Greedy Solution:
+ Comparisons: 69
+ Cost: 2.08
+Dynamic Solution:
+ Calls: 155
+ Cost: 1.91
+***************************
+***** Randomized 4.71 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 569
+ Cost: 4.64
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.0
+***************************
+***** Randomized 4.72 *****
+***************************
+Distribution Size: 96
+Greedy Solution:
+ Comparisons: 2174
+ Cost: 7.99
+Dynamic Solution:
+
+ Calls: 304001
+ Cost: 5.63
+***************************
+***** Randomized 4.73 *****
+***************************
+Distribution Size: 7
+Greedy Solution:
+ Comparisons: 42
+ Cost: 1.57
+Dynamic Solution:
+ Calls: 155
+ Cost: 1.65
+***************************
+***** Randomized 4.74 *****
+***************************
+Distribution Size: 99
+Greedy Solution:
+ Comparisons: 2003
+ Cost: 7.35
+Dynamic Solution:
+ Calls: 333103
+ Cost: 5.79
+***************************
+***** Randomized 4.75 *****
+***************************
+Distribution Size: 20
+Greedy Solution:
+ Comparisons: 199
+ Cost: 3.09
+Dynamic Solution:
+ Calls: 3041
+ Cost: 2.98
+***************************
+***** Randomized 4.76 *****
+***************************
+Distribution Size: 38
+Greedy Solution:
+ Comparisons: 556
+ Cost: 4.57
+Dynamic Solution:
+ Calls: 19685
+ Cost: 4.05
+***************************
+***** Randomized 4.77 *****
+***************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1218
+ Cost: 6.43
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.88
+***************************
+***** Randomized 4.78 *****
+***************************
+Distribution Size: 75
+Greedy Solution:
+ Comparisons: 1661
+ Cost: 7.39
+Dynamic Solution:
+ Calls: 146151
+ Cost: 5.08
+***************************
+***** Randomized 4.79 *****
+***************************
+Distribution Size: 52
+Greedy Solution:
+ Comparisons: 840
+ Cost: 5.25
+Dynamic Solution:
+ Calls: 49505
+ Cost: 4.46
+***************************
+***** Randomized 4.80 *****
+***************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1332
+ Cost: 5.87
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.06
+***************************
+***** Randomized 4.81 *****
+***************************
+Distribution Size: 29
+Greedy Solution:
+ Comparisons: 406
+ Cost: 4.14
+Dynamic Solution:
+ Calls: 8933
+ Cost: 3.54
+***************************
+***** Randomized 4.82 *****
+***************************
+Distribution Size: 57
+Greedy Solution:
+ Comparisons: 1055
+ Cost: 5.97
+Dynamic Solution:
+ Calls: 64905
+ Cost: 4.65
+***************************
+***** Randomized 4.83 *****
+***************************
+Distribution Size: 78
+Greedy Solution:
+ Comparisons: 1817
+ Cost: 7.65
+Dynamic Solution:
+ Calls: 164165
+ Cost: 5.11
+***************************
+***** Randomized 4.84 *****
+***************************
+Distribution Size: 27
+Greedy Solution:
+ Comparisons: 338
+ Cost: 3.93
+Dynamic Solution:
+ Calls: 7255
+ Cost: 3.59
+***************************
+***** Randomized 4.85 *****
+***************************
+Distribution Size: 56
+Greedy Solution:
+ Comparisons: 907
+ Cost: 5.52
+Dynamic Solution:
+ Calls: 61601
+ Cost: 4.73
+***************************
+***** Randomized 4.86 *****
+***************************
+Distribution Size: 6
+Greedy Solution:
+ Comparisons: 32
+ Cost: 1.84
+Dynamic Solution:
+ Calls: 101
+ Cost: 1.84
+***************************
+***** Randomized 4.87 *****
+***************************
+Distribution Size: 79
+Greedy Solution:
+ Comparisons: 1377
+ Cost: 5.91
+Dynamic Solution:
+ Calls: 170483
+ Cost: 5.16
+***************************
+***** Randomized 4.88 *****
+***************************
+Distribution Size: 35
+Greedy Solution:
+ Comparisons: 499
+ Cost: 4.25
+Dynamic Solution:
+ Calls: 15471
+ Cost: 3.67
+***************************
+***** Randomized 4.89 *****
+***************************
+Distribution Size: 38
+Greedy Solution:
+ Comparisons: 619
+ Cost: 5.15
+Dynamic Solution:
+ Calls: 19685
+ Cost: 3.95
+***************************
+***** Randomized 4.90 *****
+***************************
+Distribution Size: 86
+Greedy Solution:
+ Comparisons: 1609
+ Cost: 6.46
+Dynamic Solution:
+ Calls: 219301
+ Cost: 5.31
+***************************
+***** Randomized 4.91 *****
+***************************
+Distribution Size: 44
+Greedy Solution:
+ Comparisons: 625
+ Cost: 4.66
+Dynamic Solution:
+ Calls: 30273
+ Cost: 4.28
+***************************
+***** Randomized 4.92 *****
+***************************
+Distribution Size: 27
+Greedy Solution:
+ Comparisons: 338
+ Cost: 3.9
+Dynamic Solution:
+ Calls: 7255
+ Cost: 3.54
+***************************
+***** Randomized 4.93 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 733
+ Cost: 4.96
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.33
+***************************
+***** Randomized 4.94 *****
+***************************
+Distribution Size: 18
+Greedy Solution:
+ Comparisons: 203
+ Cost: 3.45
+Dynamic Solution:
+ Calls: 2245
+ Cost: 2.87
+***************************
+***** Randomized 4.95 *****
+***************************
+Distribution Size: 58
+Greedy Solution:
+ Comparisons: 1002
+ Cost: 5.54
+Dynamic Solution:
+ Calls: 68325
+ Cost: 4.61
+***************************
+***** Randomized 4.96 *****
+***************************
+Distribution Size: 15
+Greedy Solution:
+ Comparisons: 140
+ Cost: 3.0
+Dynamic Solution:
+ Calls: 1331
+ Cost: 2.87
+***************************
+***** Randomized 4.97 *****
+***************************
+Distribution Size: 82
+Greedy Solution:
+ Comparisons: 1356
+ Cost: 5.74
+Dynamic Solution:
+ Calls: 190405
+ Cost: 5.18
+***************************
+***** Randomized 4.98 *****
+***************************
+Distribution Size: 42
+Greedy Solution:
+ Comparisons: 575
+ Cost: 4.48
+Dynamic Solution:
+ Calls: 26405
+ Cost: 4.17
+***************************
+***** Randomized 4.99 *****
+***************************
+Distribution Size: 81
+Greedy Solution:
+ Comparisons: 1673
+ Cost: 6.88
+Dynamic Solution:
+ Calls: 183601
+ Cost: 5.23
+****************************
+***** Randomized 4.100 *****
+****************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 528
+ Cost: 4.33
+Dynamic Solution:
+ Calls: 18205
+ Cost: 3.97
+**************************
+***** Randomized 5.1 *****
+**************************
+Distribution Size: 12
+Greedy Solution:
+ Comparisons: 113
+ Cost: 2.61
+Dynamic Solution:
+ Calls: 705
+ Cost: 2.33
+**************************
+***** Randomized 5.2 *****
+**************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 1815
+ Cost: 7.09
+Dynamic Solution:
+
+ Calls: 234785
+ Cost: 5.38
+**************************
+***** Randomized 5.3 *****
+**************************
+Distribution Size: 64
+Greedy Solution:
+ Comparisons: 1335
+ Cost: 6.92
+Dynamic Solution:
+ Calls: 91393
+ Cost: 4.87
+**************************
+***** Randomized 5.4 *****
+**************************
+Distribution Size: 14
+Greedy Solution:
+ Comparisons: 172
+ Cost: 3.34
+Dynamic Solution:
+ Calls: 1093
+ Cost: 2.96
+**************************
+***** Randomized 5.5 *****
+**************************
+Distribution Size: 49
+Greedy Solution:
+ Comparisons: 801
+ Cost: 5.38
+Dynamic Solution:
+ Calls: 41553
+ Cost: 4.38
+**************************
+***** Randomized 5.6 *****
+**************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 1638
+ Cost: 6.43
+Dynamic Solution:
+ Calls: 234785
+ Cost: 5.35
+**************************
+***** Randomized 5.7 *****
+**************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1673
+ Cost: 6.61
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.33
+**************************
+***** Randomized 5.8 *****
+**************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 2210
+ Cost: 8.59
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.36
+**************************
+***** Randomized 5.9 *****
+**************************
+Distribution Size: 15
+Greedy Solution:
+ Comparisons: 167
+ Cost: 3.12
+Dynamic Solution:
+ Calls: 1331
+ Cost: 2.75
+***************************
+***** Randomized 5.10 *****
+***************************
+Distribution Size: 70
+Greedy Solution:
+ Comparisons: 1218
+ Cost: 5.85
+Dynamic Solution:
+ Calls: 119141
+ Cost: 4.99
+***************************
+***** Randomized 5.11 *****
+***************************
+Distribution Size: 27
+Greedy Solution:
+ Comparisons: 398
+ Cost: 4.58
+Dynamic Solution:
+ Calls: 7255
+ Cost: 3.47
+***************************
+***** Randomized 5.12 *****
+***************************
+Distribution Size: 30
+Greedy Solution:
+ Comparisons: 383
+ Cost: 4.13
+Dynamic Solution:
+ Calls: 9861
+ Cost: 3.76
+***************************
+***** Randomized 5.13 *****
+***************************
+Distribution Size: 93
+Greedy Solution:
+ Comparisons: 2282
+ Cost: 8.44
+Dynamic Solution:
+ Calls: 276645
+ Cost: 5.55
+***************************
+***** Randomized 5.14 *****
+***************************
+Distribution Size: 6
+Greedy Solution:
+ Comparisons: 47
+ Cost: 2.52
+Dynamic Solution:
+ Calls: 101
+ Cost: 2.03
+***************************
+***** Randomized 5.15 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 62
+ Cost: 2.57
+Dynamic Solution:
+ Calls: 313
+ Cost: 2.48
+***************************
+***** Randomized 5.16 *****
+***************************
+Distribution Size: 94
+Greedy Solution:
+ Comparisons: 1884
+ Cost: 7.09
+Dynamic Solution:
+ Calls: 285573
+ Cost: 5.56
+***************************
+***** Randomized 5.17 *****
+***************************
+Distribution Size: 69
+Greedy Solution:
+ Comparisons: 1358
+ Cost: 6.57
+Dynamic Solution:
+ Calls: 114173
+ Cost: 4.98
+***************************
+***** Randomized 5.18 *****
+***************************
+Distribution Size: 70
+Greedy Solution:
+ Comparisons: 1206
+ Cost: 5.76
+Dynamic Solution:
+ Calls: 119141
+ Cost: 4.94
+***************************
+***** Randomized 5.19 *****
+***************************
+Distribution Size: 23
+Greedy Solution:
+ Comparisons: 244
+ Cost: 3.25
+Dynamic Solution:
+ Calls: 4555
+ Cost: 3.27
+***************************
+***** Randomized 5.20 *****
+***************************
+Distribution Size: 33
+Greedy Solution:
+ Comparisons: 434
+ Cost: 4.46
+Dynamic Solution:
+ Calls: 13025
+ Cost: 3.91
+***************************
+***** Randomized 5.21 *****
+***************************
+Distribution Size: 92
+Greedy Solution:
+ Comparisons: 1966
+ Cost: 7.38
+Dynamic Solution:
+ Calls: 267905
+ Cost: 5.48
+***************************
+***** Randomized 5.22 *****
+***************************
+Distribution Size: 12
+Greedy Solution:
+ Comparisons: 98
+ Cost: 2.66
+Dynamic Solution:
+ Calls: 705
+ Cost: 2.6
+***************************
+***** Randomized 5.23 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 790
+ Cost: 5.32
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.39
+***************************
+***** Randomized 5.24 *****
+***************************
+Distribution Size: 51
+Greedy Solution:
+ Comparisons: 821
+ Cost: 5.22
+Dynamic Solution:
+ Calls: 46751
+ Cost: 4.45
+***************************
+***** Randomized 5.25 *****
+***************************
+Distribution Size: 3
+Greedy Solution:
+ Comparisons: 11
+ Cost: 1.44
+Dynamic Solution:
+ Calls: 15
+ Cost: 1.44
+***************************
+***** Randomized 5.26 *****
+***************************
+Distribution Size: 63
+Greedy Solution:
+ Comparisons: 1076
+ Cost: 5.75
+Dynamic Solution:
+ Calls: 87235
+ Cost: 4.78
+***************************
+***** Randomized 5.27 *****
+***************************
+Distribution Size: 20
+Greedy Solution:
+ Comparisons: 199
+ Cost: 3.44
+Dynamic Solution:
+ Calls: 3041
+ Cost: 3.28
+***************************
+***** Randomized 5.28 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 1561
+ Cost: 6.37
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.24
+***************************
+***** Randomized 5.29 *****
+***************************
+Distribution Size: 12
+Greedy Solution:
+ Comparisons: 101
+ Cost: 2.66
+Dynamic Solution:
+ Calls: 705
+ Cost: 2.58
+***************************
+***** Randomized 5.30 *****
+***************************
+Distribution Size: 82
+Greedy Solution:
+ Comparisons: 1932
+ Cost: 7.88
+Dynamic Solution:
+ Calls: 190405
+ Cost: 5.19
+***************************
+***** Randomized 5.31 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 774
+ Cost: 6.31
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.15
+***************************
+***** Randomized 5.32 *****
+***************************
+Distribution Size: 43
+Greedy Solution:
+ Comparisons: 711
+ Cost: 5.3
+Dynamic Solution:
+ Calls: 28295
+ Cost: 4.22
+***************************
+***** Randomized 5.33 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 618
+ Cost: 4.93
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.0
+***************************
+***** Randomized 5.34 *****
+***************************
+Distribution Size: 87
+Greedy Solution:
+ Comparisons: 1667
+ Cost: 6.59
+Dynamic Solution:
+ Calls: 226955
+ Cost: 5.32
+***************************
+***** Randomized 5.35 *****
+***************************
+Distribution Size: 75
+Greedy Solution:
+ Comparisons: 1502
+ Cost: 6.7
+Dynamic Solution:
+
+ Calls: 146151
+ Cost: 5.09
+***************************
+***** Randomized 5.36 *****
+***************************
+Distribution Size: 68
+Greedy Solution:
+ Comparisons: 1192
+ Cost: 5.78
+Dynamic Solution:
+ Calls: 109345
+ Cost: 4.88
+***************************
+***** Randomized 5.37 *****
+***************************
+Distribution Size: 97
+Greedy Solution:
+ Comparisons: 2076
+ Cost: 7.63
+Dynamic Solution:
+ Calls: 313505
+ Cost: 5.7
+***************************
+***** Randomized 5.38 *****
+***************************
+Distribution Size: 40
+Greedy Solution:
+ Comparisons: 549
+ Cost: 4.28
+Dynamic Solution:
+ Calls: 22881
+ Cost: 4.02
+***************************
+***** Randomized 5.39 *****
+***************************
+Distribution Size: 22
+Greedy Solution:
+ Comparisons: 237
+ Cost: 3.32
+Dynamic Solution:
+ Calls: 4005
+ Cost: 3.19
+***************************
+***** Randomized 5.40 *****
+***************************
+Distribution Size: 53
+Greedy Solution:
+ Comparisons: 943
+ Cost: 5.59
+Dynamic Solution:
+ Calls: 52365
+ Cost: 4.45
+***************************
+***** Randomized 5.41 *****
+***************************
+Distribution Size: 66
+Greedy Solution:
+ Comparisons: 1106
+ Cost: 5.43
+Dynamic Solution:
+ Calls: 100101
+ Cost: 4.75
+***************************
+***** Randomized 5.42 *****
+***************************
+Distribution Size: 30
+Greedy Solution:
+ Comparisons: 467
+ Cost: 4.46
+Dynamic Solution:
+ Calls: 9861
+ Cost: 3.62
+***************************
+***** Randomized 5.43 *****
+***************************
+Distribution Size: 47
+Greedy Solution:
+ Comparisons: 733
+ Cost: 4.89
+Dynamic Solution:
+ Calls: 36755
+ Cost: 4.29
+***************************
+***** Randomized 5.44 *****
+***************************
+Distribution Size: 2
+Greedy Solution:
+ Comparisons: 4
+ Cost: 1.21
+Dynamic Solution:
+ Calls: 5
+ Cost: 1.21
+***************************
+***** Randomized 5.45 *****
+***************************
+Distribution Size: 95
+Greedy Solution:
+ Comparisons: 1831
+ Cost: 6.85
+Dynamic Solution:
+ Calls: 294691
+ Cost: 5.62
+***************************
+***** Randomized 5.46 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 758
+ Cost: 4.93
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.25
+***************************
+***** Randomized 5.47 *****
+***************************
+Distribution Size: 45
+Greedy Solution:
+ Comparisons: 725
+ Cost: 5.18
+Dynamic Solution:
+ Calls: 32341
+ Cost: 4.27
+***************************
+***** Randomized 5.48 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1645
+ Cost: 6.95
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.19
+***************************
+***** Randomized 5.49 *****
+***************************
+Distribution Size: 98
+Greedy Solution:
+ Comparisons: 2107
+ Cost: 7.71
+Dynamic Solution:
+ Calls: 323205
+ Cost: 5.73
+***************************
+***** Randomized 5.50 *****
+***************************
+Distribution Size: 31
+Greedy Solution:
+ Comparisons: 495
+ Cost: 5.02
+Dynamic Solution:
+ Calls: 10851
+ Cost: 3.76
+***************************
+***** Randomized 5.51 *****
+***************************
+Distribution Size: 15
+Greedy Solution:
+ Comparisons: 137
+ Cost: 2.68
+Dynamic Solution:
+ Calls: 1331
+ Cost: 2.83
+***************************
+***** Randomized 5.52 *****
+***************************
+Distribution Size: 2
+Greedy Solution:
+ Comparisons: 4
+ Cost: 1.04
+Dynamic Solution:
+ Calls: 5
+ Cost: 1.04
+***************************
+***** Randomized 5.53 *****
+***************************
+Distribution Size: 86
+Greedy Solution:
+ Comparisons: 1660
+ Cost: 6.6
+Dynamic Solution:
+ Calls: 219301
+ Cost: 5.32
+***************************
+***** Randomized 5.54 *****
+***************************
+Distribution Size: 2
+Greedy Solution:
+ Comparisons: 4
+ Cost: 1.11
+Dynamic Solution:
+ Calls: 5
+ Cost: 1.11
+***************************
+***** Randomized 5.55 *****
+***************************
+Distribution Size: 73
+Greedy Solution:
+ Comparisons: 1575
+ Cost: 7.08
+Dynamic Solution:
+ Calls: 134905
+ Cost: 5.06
+***************************
+***** Randomized 5.56 *****
+***************************
+Distribution Size: 17
+Greedy Solution:
+ Comparisons: 172
+ Cost: 3.31
+Dynamic Solution:
+ Calls: 1905
+ Cost: 2.95
+***************************
+***** Randomized 5.57 *****
+***************************
+Distribution Size: 12
+Greedy Solution:
+ Comparisons: 113
+ Cost: 2.79
+Dynamic Solution:
+ Calls: 705
+ Cost: 2.49
+***************************
+***** Randomized 5.58 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 65
+ Cost: 2.51
+Dynamic Solution:
+ Calls: 313
+ Cost: 2.44
+***************************
+***** Randomized 5.59 *****
+***************************
+Distribution Size: 59
+Greedy Solution:
+ Comparisons: 1072
+ Cost: 6.11
+Dynamic Solution:
+ Calls: 71863
+ Cost: 4.73
+***************************
+***** Randomized 5.60 *****
+***************************
+Distribution Size: 83
+Greedy Solution:
+ Comparisons: 1507
+ Cost: 6.29
+Dynamic Solution:
+ Calls: 197375
+ Cost: 5.25
+***************************
+***** Randomized 5.61 *****
+***************************
+Distribution Size: 71
+Greedy Solution:
+ Comparisons: 1252
+ Cost: 6.02
+Dynamic Solution:
+ Calls: 124251
+ Cost: 5.03
+***************************
+***** Randomized 5.62 *****
+***************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 516
+ Cost: 4.52
+Dynamic Solution:
+ Calls: 18205
+ Cost: 3.98
+***************************
+***** Randomized 5.63 *****
+***************************
+Distribution Size: 34
+Greedy Solution:
+ Comparisons: 513
+ Cost: 4.9
+Dynamic Solution:
+ Calls: 14213
+ Cost: 3.78
+***************************
+***** Randomized 5.64 *****
+***************************
+Distribution Size: 52
+Greedy Solution:
+ Comparisons: 804
+ Cost: 5.24
+Dynamic Solution:
+ Calls: 49505
+ Cost: 4.57
+***************************
+***** Randomized 5.65 *****
+***************************
+Distribution Size: 28
+Greedy Solution:
+ Comparisons: 363
+ Cost: 4.18
+Dynamic Solution:
+ Calls: 8065
+ Cost: 3.61
+***************************
+***** Randomized 5.66 *****
+***************************
+Distribution Size: 88
+Greedy Solution:
+ Comparisons: 2043
+ Cost: 7.87
+Dynamic Solution:
+ Calls: 234785
+ Cost: 5.37
+***************************
+***** Randomized 5.67 *****
+***************************
+Distribution Size: 6
+Greedy Solution:
+ Comparisons: 41
+ Cost: 1.93
+Dynamic Solution:
+ Calls: 101
+ Cost: 1.7
+***************************
+***** Randomized 5.68 *****
+***************************
+Distribution Size: 37
+Greedy Solution:
+ Comparisons: 576
+ Cost: 5.12
+Dynamic Solution:
+ Calls: 18205
+ Cost: 4.1
+***************************
+***** Randomized 5.69 *****
+***************************
+Distribution Size: 82
+Greedy Solution:
+ Comparisons: 2001
+ Cost: 8.11
+Dynamic Solution:
+ Calls: 190405
+ Cost: 5.23
+***************************
+***** Randomized 5.70 *****
+***************************
+Distribution Size: 70
+Greedy Solution:
+ Comparisons: 1182
+ Cost: 5.67
+Dynamic Solution:
+ Calls: 119141
+ Cost: 4.93
+***************************
+***** Randomized 5.71 *****
+***************************
+Distribution Size: 98
+Greedy Solution:
+ Comparisons: 2275
+ Cost: 8.27
+Dynamic Solution:
+ Calls: 323205
+ Cost: 5.73
+***************************
+***** Randomized 5.72 *****
+***************************
+Distribution Size: 90
+Greedy Solution:
+ Comparisons: 2429
+ Cost: 9.09
+Dynamic Solution:
+
+ Calls: 250981
+ Cost: 5.43
+***************************
+***** Randomized 5.73 *****
+***************************
+Distribution Size: 1
+Greedy Solution:
+ Comparisons: 0
+ Cost: 1.0
+Dynamic Solution:
+ Calls: 1
+ Cost: 1.0
+***************************
+***** Randomized 5.74 *****
+***************************
+Distribution Size: 41
+Greedy Solution:
+ Comparisons: 544
+ Cost: 4.21
+Dynamic Solution:
+ Calls: 24601
+ Cost: 3.95
+***************************
+***** Randomized 5.75 *****
+***************************
+Distribution Size: 77
+Greedy Solution:
+ Comparisons: 1408
+ Cost: 6.32
+Dynamic Solution:
+ Calls: 158005
+ Cost: 5.13
+***************************
+***** Randomized 5.76 *****
+***************************
+Distribution Size: 26
+Greedy Solution:
+ Comparisons: 319
+ Cost: 3.66
+Dynamic Solution:
+ Calls: 6501
+ Cost: 3.39
+***************************
+***** Randomized 5.77 *****
+***************************
+Distribution Size: 16
+Greedy Solution:
+ Comparisons: 141
+ Cost: 2.6
+Dynamic Solution:
+ Calls: 1601
+ Cost: 2.59
+***************************
+***** Randomized 5.78 *****
+***************************
+Distribution Size: 11
+Greedy Solution:
+ Comparisons: 76
+ Cost: 2.38
+Dynamic Solution:
+ Calls: 551
+ Cost: 2.53
+***************************
+***** Randomized 5.79 *****
+***************************
+Distribution Size: 76
+Greedy Solution:
+ Comparisons: 1671
+ Cost: 7.32
+Dynamic Solution:
+ Calls: 152001
+ Cost: 5.13
+***************************
+***** Randomized 5.80 *****
+***************************
+Distribution Size: 6
+Greedy Solution:
+ Comparisons: 38
+ Cost: 1.82
+Dynamic Solution:
+ Calls: 101
+ Cost: 1.69
+***************************
+***** Randomized 5.81 *****
+***************************
+Distribution Size: 33
+Greedy Solution:
+ Comparisons: 428
+ Cost: 3.97
+Dynamic Solution:
+ Calls: 13025
+ Cost: 3.79
+***************************
+***** Randomized 5.82 *****
+***************************
+Distribution Size: 13
+Greedy Solution:
+ Comparisons: 102
+ Cost: 2.57
+Dynamic Solution:
+ Calls: 885
+ Cost: 2.7
+***************************
+***** Randomized 5.83 *****
+***************************
+Distribution Size: 26
+Greedy Solution:
+ Comparisons: 310
+ Cost: 3.67
+Dynamic Solution:
+ Calls: 6501
+ Cost: 3.53
+***************************
+***** Randomized 5.84 *****
+***************************
+Distribution Size: 23
+Greedy Solution:
+ Comparisons: 301
+ Cost: 3.72
+Dynamic Solution:
+ Calls: 4555
+ Cost: 3.25
+***************************
+***** Randomized 5.85 *****
+***************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 506
+ Cost: 4.21
+Dynamic Solution:
+ Calls: 21243
+ Cost: 3.99
+***************************
+***** Randomized 5.86 *****
+***************************
+Distribution Size: 36
+Greedy Solution:
+ Comparisons: 497
+ Cost: 4.42
+Dynamic Solution:
+ Calls: 16801
+ Cost: 3.95
+***************************
+***** Randomized 5.87 *****
+***************************
+Distribution Size: 66
+Greedy Solution:
+ Comparisons: 1448
+ Cost: 7.11
+Dynamic Solution:
+ Calls: 100101
+ Cost: 4.81
+***************************
+***** Randomized 5.88 *****
+***************************
+Distribution Size: 46
+Greedy Solution:
+ Comparisons: 705
+ Cost: 5.02
+Dynamic Solution:
+ Calls: 34501
+ Cost: 4.27
+***************************
+***** Randomized 5.89 *****
+***************************
+Distribution Size: 48
+Greedy Solution:
+ Comparisons: 1001
+ Cost: 6.0
+Dynamic Solution:
+ Calls: 39105
+ Cost: 4.29
+***************************
+***** Randomized 5.90 *****
+***************************
+Distribution Size: 17
+Greedy Solution:
+ Comparisons: 220
+ Cost: 3.65
+Dynamic Solution:
+ Calls: 1905
+ Cost: 2.81
+***************************
+***** Randomized 5.91 *****
+***************************
+Distribution Size: 61
+Greedy Solution:
+ Comparisons: 1233
+ Cost: 6.71
+Dynamic Solution:
+ Calls: 79301
+ Cost: 4.82
+***************************
+***** Randomized 5.92 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 201
+ Cost: 3.35
+Dynamic Solution:
+ Calls: 2623
+ Cost: 3.13
+***************************
+***** Randomized 5.93 *****
+***************************
+Distribution Size: 43
+Greedy Solution:
+ Comparisons: 702
+ Cost: 5.12
+Dynamic Solution:
+ Calls: 28295
+ Cost: 4.12
+***************************
+***** Randomized 5.94 *****
+***************************
+Distribution Size: 19
+Greedy Solution:
+ Comparisons: 192
+ Cost: 3.03
+Dynamic Solution:
+ Calls: 2623
+ Cost: 2.99
+***************************
+***** Randomized 5.95 *****
+***************************
+Distribution Size: 9
+Greedy Solution:
+ Comparisons: 65
+ Cost: 2.72
+Dynamic Solution:
+ Calls: 313
+ Cost: 2.39
+***************************
+***** Randomized 5.96 *****
+***************************
+Distribution Size: 52
+Greedy Solution:
+ Comparisons: 834
+ Cost: 5.45
+Dynamic Solution:
+ Calls: 49505
+ Cost: 4.57
+***************************
+***** Randomized 5.97 *****
+***************************
+Distribution Size: 80
+Greedy Solution:
+ Comparisons: 1570
+ Cost: 6.55
+Dynamic Solution:
+ Calls: 176961
+ Cost: 5.18
+***************************
+***** Randomized 5.98 *****
+***************************
+Distribution Size: 75
+Greedy Solution:
+ Comparisons: 1622
+ Cost: 7.08
+Dynamic Solution:
+ Calls: 146151
+ Cost: 5.1
+***************************
+***** Randomized 5.99 *****
+***************************
+Distribution Size: 6
+Greedy Solution:
+ Comparisons: 35
+ Cost: 2.21
+Dynamic Solution:
+ Calls: 101
+ Cost: 2.32
+****************************
+***** Randomized 5.100 *****
+****************************
+Distribution Size: 39
+Greedy Solution:
+ Comparisons: 713
+ Cost: 5.78
+Dynamic Solution:
+ Calls: 21243
+ Cost: 4.05
+
+*******************************************************************************
+For random-sized sets (above), the average costs for Greedy and Dynamic are...
+Size : Greedy : Dynamic
+1 : 1.0 : 1.0
+2 : 1.2733333333333332 : 1.2733333333333332
+3 : 1.4725000000000001 : 1.4725000000000001
+4 : 1.6425 : 1.545
+5 : 1.8533333333333335 : 1.8166666666666664
+6 : 2.0383333333333336 : 1.9500000000000002
+7 : 2.0375 : 1.9300000000000002
+8 : 2.3799999999999994 : 2.26
+9 : 2.3057142857142856 : 2.244285714285714
+10 : 2.448571428571429 : 2.3442857142857143
+11 : 2.39 : 2.35
+12 : 2.728 : 2.478
+13 : 2.948 : 2.754
+14 : 2.9933333333333336 : 2.78
+15 : 3.154 : 2.798
+17 : 3.303333333333333 : 2.8033333333333332
+16 : 2.9066666666666663 : 2.6533333333333333
+19 : 3.396666666666667 : 3.0499999999999994
+18 : 3.17 : 2.925
+21 : 3.8550000000000004 : 3.165
+20 : 3.466666666666667 : 3.1650000000000005
+23 : 3.543333333333333 : 3.2750000000000004
+22 : 3.6828571428571424 : 3.205714285714286
+25 : 3.8366666666666664 : 3.4033333333333338
+24 : 3.5 : 3.365
+27 : 4.214 : 3.564
+26 : 4.023333333333333 : 3.486666666666667
+29 : 4.45 : 3.59
+28 : 4.17 : 3.63
+31 : 4.5275 : 3.6825
+30 : 4.254 : 3.686
+34 : 4.384 : 3.808
+35 : 4.6499999999999995 : 3.875714285714286
+32 : 4.386666666666667 : 3.8433333333333333
+33 : 4.303333333333334 : 3.815
+38 : 4.726000000000001 : 4.0
+39 : 4.858888888888888 : 4.058888888888888
+36 : 4.401666666666666 : 3.855
+37 : 4.67125 : 4.007499999999999
+42 : 4.735 : 4.18
+43 : 5.290000000000001 : 4.174
+40 : 4.9025 : 4.07
+41 : 4.806666666666667 : 4.116666666666666
+46 : 5.016249999999999 : 4.210000000000001
+47 : 5.320909090909091 : 4.321818181818181
+44 : 4.915 : 4.1875
+45 : 5.396666666666667 : 4.263333333333333
+51 : 5.526666666666666 : 4.433333333333334
+50 : 5.281428571428571 : 4.458571428571429
+49 : 5.548333333333333 : 4.4
+48 : 5.22 : 4.338571428571428
+55 : 5.673333333333333 : 4.578333333333333
+54 : 5.302857142857143 : 4.541428571428571
+53 : 5.3100000000000005 : 4.53
+52 : 5.421666666666667 : 4.536666666666667
+59 : 6.1339999999999995 : 4.706
+58 : 5.8 : 4.62
+57 : 5.812857142857142 : 4.665714285714286
+56 : 6.21 : 4.63
+63 : 6.168571428571428 : 4.815714285714286
+62 : 6.035 : 4.7925
+61 : 5.6499999999999995 : 4.776666666666666
+60 : 5.385 : 4.779999999999999
+68 : 5.96 : 4.916
+69 : 6.583333333333333 : 4.94
+70 : 5.9879999999999995 : 4.9399999999999995
+71 : 6.41625 : 5.005000000000001
+64 : 6.15875 : 4.8175
+65 : 6.046666666666667 : 4.853333333333333
+66 : 6.128 : 4.818
+67 : 6.458 : 4.894
+76 : 6.484285714285714 : 5.105714285714285
+77 : 6.78625 : 5.115
+78 : 6.512499999999999 : 5.135000000000001
+79 : 7.045 : 5.16
+72 : 6.4 : 5.03
+73 : 6.465 : 5.045
+74 : 6.8625 : 5.055
+75 : 6.63 : 5.082000000000001
+85 : 7.2700000000000005 : 5.283333333333334
+84 : 6.843333333333333 : 5.266666666666667
+87 : 6.960000000000001 : 5.338749999999999
+86 : 6.623333333333332 : 5.3133333333333335
+81 : 6.703333333333333 : 5.205
+80 : 6.658181818181817 : 5.18
+83 : 7.0857142857142845 : 5.2457142857142856
+82 : 7.125 : 5.218333333333334
+93 : 7.63 : 5.529999999999999
+92 : 7.532000000000001 : 5.486
+95 : 7.258 : 5.606
+94 : 7.246666666666666 : 5.56
+89 : 6.967500000000001 : 5.3925
+88 : 7.28125 : 5.36875
+91 : 8.19 : 5.44
+90 : 7.6575 : 5.425
+98 : 7.646000000000001 : 5.73
+99 : 7.865 : 5.79
+96 : 7.700000000000001 : 5.632499999999999
+97 : 7.468333333333334 : 5.696666666666666
+
+*********************************************************
+Part Three (continued), 4 Given Distributions
+Uniform (1/N), Sharply Biased (hump at 1),
+Slightly Biased (hump at N/4), Symmetrical (max at N/2)
+Press enter to continue...
+*******************
+***** Uniform *****
+*******************
+Size: 4
+ 20 | 0.2
+ 20 | 0.2
+ 20 | 0.2
+ 20 | 0.2
+*******************
+Greedy Solution Tree:
+ Comparisons: 21
+ Cost: 2.0
+ 20
+  20
+   20
+    20
+     $
+     $
+    $
+   $
+  $
+
+Dynamic Solution Tree:
+ Calls: 33
+ Cost: 1.6
+20
+ 20
+  $
+  $
+ 20
+  $
+  20
+   $
+   $
+**************************
+***** Sharply Biased *****
+**************************
+Size: 4
+ 60 | 0.6
+ 20 | 0.2
+ 15 | 0.15
+ 5 | 0.05
+**************************
+Greedy Solution Tree:
+ Comparisons: 18
+ Cost: 1.6
+ 60
+  20
+   15
+    $
+    $
+   5
+    $
+    $
+  $
+
+Dynamic Solution Tree:
+ Calls: 33
+ Cost: 1.65
+60
+ $
+ 20
+  $
+  15
+   $
+   5
+    $
+    $
+***************************
+***** Slightly Biased *****
+***************************
+Size: 5
+ 45 | 0.45
+ 25 | 0.25
+ 15 | 0.15
+ 10 | 0.1
+ 5 | 0.05
+***************************
+Greedy Solution Tree:
+ Comparisons: 25
+ Cost: 1.9
+ 45
+  25
+   15
+    10
+     $
+     $
+    $
+   $
+  5
+   $
+   $
+
+Dynamic Solution Tree:
+ Calls: 61
+ Cost: 1.95
+25
+ 45
+  $
+  $
+ 15
+  $
+  10
+   $
+   5
+    $
+    $
+***********************
+***** Symmetrical *****
+***********************
+Size: 8
+ 3 | 0.03
+ 9 | 0.09
+ 14 | 0.14
+ 26 | 0.26
+ 21 | 0.21
+ 15 | 0.15
+ 9 | 0.09
+ 3 | 0.03
+***********************
+Greedy Solution Tree:
+ Comparisons: 55
+ Cost: 2.41
+ 26
+  21
+   15
+    14
+     $
+     $
+    $
+   $
+  9
+   9
+    3
+     3
+      $
+      $
+     $
+    $
+   $
+
+Dynamic Solution Tree:
+ Calls: 225
+ Cost: 2.25
+26
+ 14
+  9
+   3
+    $
+    $
+   $
+  $
+ 15
+  21
+   $
+   $
+  9
+   $
+   3
+    $
+    $

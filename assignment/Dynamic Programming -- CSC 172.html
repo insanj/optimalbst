@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/HTML4.01/loose.dtd">
+
+<HTML>
+
+<HEAD>
+<TITLE>Dynamic Programming -- CSC 172 </TITLE>
+  <META http-equiv="pragma" content="no-cache" />
+  <LINK rel=stylesheet type="text/css"
+        href="csc_160.css" />
+</HEAD>
+
+<BODY>
+
+<IMG SRC="banner.png">
+
+<H1> Dynamic Programming </H1>
+<p>
+<center>
+<IMG SRC="seqcomp.jpeg">
+<p>
+<IMG SRC="line.redblueS.gif">
+</center>
+<p>
+<h2> Assignment</h2>
+<p>
+1. Write a greedy solution and a dynamic programming solution to the
+optimal
+binary search tree problem (Weiss pp. 469-472).
+2. For the DP solution you need to generate a path-cost metric for 
+your solution.  It's easy, so write a program to get the path-cost
+metric for any BST and your distribution of items.
+<p>
+<ol>
+<li> Duplicate the example greedy and DP cases (figs 10.47-10.48
+without
+the balanced search tree case). NOTE: if you want to substitute
+integers
+for the words, that's a good idea -- the rest of the project
+assumes integers, not words.
+The point is to show you get the same trees
+(fig. 10.51 could be very useful for debugging).
+<li>
+Write a little method to generate search-item probability distributions
+(like fig. 10.47).
+The items should just be integers from 1 to N.
+The program takes argument int N (size of
+tree)
+and returns
+an array of N "random" probabilities summing to unity (1.0).  This is easy
+(hint: normalize N random numbers (divide each by their sum)).
+The following question occurred to me...
+<li>   Can we say anything coherent about the characteristics of
+graphs and probability distribution  that have greedy solutions?  Some ideas:
+<ul>
+<li> Generate and test 100 distributions for different <i>sized</i> search
+sets: Greedy solutions work for the smallest,  but what's their
+probability of working as the number of search items increases?  Do
+enough different sizes to
+formulate a hypothesis.
+<li> Now these distributions we're generating are pretty out of
+control.  There is no correlation of frequencies (thus probabilities)
+with the order of the items, and the use of the word "random" above
+implies
+use of a function probably called <tt>random</tt> that returns
+uniformly-
+distributed random numbers.  So the probability distributions of 
+elements (what we see in the "Probabilities" column of any tables
+we make that look like Fig. 10.47) are themselves random, with no correlation of frequencies 
+to the structure of the BST tree.
+<p>
+I (CB) thought initially that it might be interesting to get the
+frequencies (unnormalized probabilities) from different probability
+distributions than the uniform. The only change to the previous
+paragraph would be "normalize N random numbers sampled from a
+non-uniform probability density function").  I had in mind
+sampling non-uniform
+(maybe Normal or Poisson) distributions, presumably given
+by some library or constructed by you (easy).  But  now I don't
+think that's
+likely to yield 
+interesting results...too subtle an effect and too little relation
+between the frequencies and the probabilities.  Who knows -- this
+is research after all.  I've had reports that there IS a difference!
+But let's try something else.
+<p>
+My next off-the-wall idea is also easy to do:
+ Let's hand-craft some distributions (that is, like the numbers in the
+ second column of Fig. 2.47).  If the items in the set to be searched
+are equally likely, their chance of appearing is uniformly
+distributed. That's clearly NOT the same as their frequencies being
+"random",
+as we did above -- if their distribution is uniform, the frequencies
+are
+all the same.  Thus all the numbers in the "probability" column
+(remember, probabilities are just normalized frequencies) are the
+same.
+Each number from 1 to N is equally likely.  This would be expected to
+give
+both a greedy and an optimal BST algorithm some trouble.
+<p>
+  Goodie! -- an effect!   We
+should try it, torture those methods, then move on to
+try some simple but different distributions over the small-to-large
+set elements (integers in our case).
+<p>
+Now remembering that N might be a parameter affecting whether greedy
+algorithms give acceptable results, it would be best to pick one
+particular N to use to  demonstrate how well the greedy method works
+dependending  on the probability
+distribution
+function alone.   Failing "universal most convincing N",
+we can again run experiments for different N.
+Other than that, there are <b>no statics, no repeated trials</b>
+in what follows (!).
+<p>
+It seems to CB that one possible hypothesis is that a uniform
+distribution
+breaks the assumptions of the problem (there is a best order).  Seems
+obvious.  What happens with the algorithms?
+<p>
+Next, if the distribution is not flat, then next most complicated
+shape  has a single hump. 
+The position of the mode
+(maximum, hump) in the
+distribution can vary from  one end of the ordered items  (say the
+small end, N = 1) to
+their middle. By symmetry this will also account for the mirror-image
+cases from middle largest item, yes?
+<p>
+So now we're motivated to 
+construct some
+sets of inputs, possibly  of varying size if we can't settle on a
+good (range of) value for N.  For an N, let's make
+four tables (like Fig. 10.47), using four different probability
+distribution columns.
+<ol>
+<li> Uniform.  For a table of size N, each probability is the same: 1/N.
+<li> Sharply biased to small: hump at 1.
+<li> Slightly biased to small: hump at N/4.
+<li> Symmetrical with maximum at N/2.
+</ol>
+If you know what N to use, we only need to generate 4 tables and 4
+yes-or-no answers ONLY: the
+first
+column is easy in every case: in every case the items are 1:N.<br>
+The Uniform case is easy: the second column is uniformly equal to 1/N.<br>
+<p>
+Cases 2-4 can be done with triangles.   Case 2 could start with the
+frequency value of N in the first row (item 1), decrement the
+frequency
+by one for each
+subsequent row, wind up at 1 for last row (item N).
+Then normalizing that column gives probabilities.<br>
+For the third and fourth cases, I'd make triangular
+distributions.
+For 4th case, set
+frequency value to i for i=1,...,N/2, then subtract 1 for each i from N/2+1
+to N. Normalize. The third case uses similar strategy to the fourth
+case, putting peak at N/4.
+<p>
+An alternative and well-known distribution, the exponential, could be
+used for the  second case: One form for frequencies is just F(i) = F(1)<sup>i-1</sup>,
+i = 1,...,N.
+Let's say we have N=10 and we want F(10) = .1.  What should F(1) be?
+This is an easy exercise in logarithms, and the answer here is F(1) =
+.7943.
+Normalize to get probabilities.
+<p>
+<b> Answer for this part:</b> If you have a justifiable N that you're
+confident represents the general case, there are just 8 numbers to
+compute
+and 4 questions to
+answer: For the four cases, what are the path costs for greedy and DP
+(optimal)
+solutions (8 numbers) and is the greedy solution optimal (the path
+costs are the same).
+</ul> 
+
+<li>Extra Credit: extend your DP solution to include failing searches (Weiss
+ex. 10.33).
+Demonstrate convincingly that it works correctly (for a few
+easy-to-understand
+demonstration cases).
+</ol>
+
+
+<h2> Reporting results</h2>
+
+<p>
+One simple way to print graphs is
+with
+indentation, so with $ the null node, the greedy and optimal graphs could be
+<pre>
+GREEDY
+if
+ a
+  $
+  and
+   am
+   egg
+ two
+  the
+  $
+</pre>
+
+<pre>
+OPTIMAL
+and
+ a
+  $
+  am
+ if
+  egg
+  two
+   the
+   $
+</pre>
+<p>
+Or you might like a LISP-ish approach: with () the null list, we could
+use
+a recursive (word left-sub rightsub) structure and get<br>
+<tt>(if (a () (and am egg)) (two the ()))</tt><br>
+<tt>(and (a () am) (if egg (two the ()))).   </tt><br>
+
+<h2> Hand  In</h2>
+
+The usual -- file of code, 
+file(s) of transcripts documenting your work and findings,
+usual README augmented with  a prose description of your procedures
+and conclusions on task 3 and the
+extra credit work.  Also if you make some pretty graphics or want to
+describe your experimental work and its conclusions in more detail, by 
+all means include an extra file with that material.
+
+<br><br>
+<img src="pics/multi_color_line.gif" ALT="---">
+<br><br>
+<address>Last update: 06/20/2012</address>
+  
+</BODY>
+</HTML>
