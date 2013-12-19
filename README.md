@@ -9,8 +9,7 @@ Idea
 Expand and understand two different types of algorithms to generate "Optimal BSTs" for specifically-given data. In this case, we're creating [Huffman Code](http://en.wikipedia.org/wiki/Huffman_coding)-like trees that are based off of a set of keys and associated probabilities. The higher the probability, the easier (computation/data structure-wise) it should be to retrieve.
 
 The given trees that *must* be reproducable by the end of this assignment are the leftmost and rightmost pictures below (middle is the "balanced" option, not part of this project):
-![Taken from CSC172 Lecture](http://i.imgur.com/4JAOHPI.jpg)
-![Taken from CSC172 Lecture](http://i.imgur.com/79o8c0o.jpg)
+![Taken from CSC172 Lecture](http://i.imgur.com/dMzHwfC.png)
 
 ---------------------------------------
 	Simplified BSD License
